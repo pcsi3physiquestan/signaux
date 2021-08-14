@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Description générale &#8212; Signaux physiques</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/signaux/notebook/description.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Signaux sinusoïdaux" href="sinusoides.html" />
+    <link rel="prev" title="Description des signaux physiques" href="../signaux.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Signaux physiques</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signaux.html">
+   Description des signaux physiques
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Description générale
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sinusoides.html">
+   Signaux sinusoïdaux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="decomposition.html">
+   Décomposition spectrale d’un signal physique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="usuels.html">
+   Exemples de spectres usuels
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ex_app.html">
+   Exercices d’applications. signaux physiques
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.cedriclacpatia.fr">Site de la classe</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/description.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/description.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/description.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#signal-physique">
+   Signal physique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#signal-numerique-et-analogique">
+   Signal numérique et analogique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#signal-periodique">
+   Signal périodique
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calcul-valeur-efficace-et-valeur-moyenne">
+   Calcul : valeur efficace et valeur moyenne
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="description-generale">
+<h1>Description générale<a class="headerlink" href="#description-generale" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="signal-physique">
+<h2>Signal physique<a class="headerlink" href="#signal-physique" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Signal physique</p>
+<p>Un signal physique est une représentation physique qui transporte une “information” depuis une source vers un destinataire.</p>
+</div>
+<div class="dropdown admonition note">
+<p class="admonition-title">Note</p>
+<p>La grande variété des signaux physiques et des systèmes pouvant être étudiés implique des technologies très différentes et des domaines d’études variés (optique et électromagnétisme, mécanique, thermodynamique… ).<br />
+Si les principes et définitions fondamentaux à l’étude de tel ou tel phénomène physique nécessite une présentation plus approfondies du domaine et ne seront étudiés que dans des chapitres ultérieurs, on peut néanmoins faire ressortir un certain nombre de caractéristiques générales utiles à l’étude de ces différents domaines.</p>
+<p>Ainsi, <strong>tout signal physique peut être associé à une ou plusieurs grandeurs physiques supposées mesurables</strong>. La variation de l’intensité de ces grandeurs est la mesure de l’information transportée.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exemples de signaux physiques et grandeurs associées</p>
+<p>Les signaux présentés ici ne sont pas exhaustifs et les grandeurs associées non plus:</p>
+<ul class="simple">
+<li><p><strong>Signal électrique.</strong> Grandeur associées: Tension (V) et Intensité (A)</p></li>
+<li><p><strong>Signal électromagnétique.</strong> Grandeur associées: Champ magnétique (T) et Champ électrique (<span class="math notranslate nohighlight">\(V.m^{-1}\)</span>)</p></li>
+<li><p><strong>Signal acoustique.</strong> Grandeur associées: Surpression (Pa) et Vitesse (<span class="math notranslate nohighlight">\(m.s^{-1}\)</span>)</p></li>
+<li><p><strong>Signal mécanique.</strong> Grandeur associées: Position (m) et Vitesse (<span class="math notranslate nohighlight">\(m.s^{-1}\)</span>)</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="signal-numerique-et-analogique">
+<h2>Signal numérique et analogique<a class="headerlink" href="#signal-numerique-et-analogique" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Signal analogique</p>
+<p>Un signal analogique est un signal à “temps continu”, c’est-à-dire qu’il peut être représenté par une fonction mathématique à variable réelle (en général le temps):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-dacca16f-4905-4b7b-b2a3-708e8618cdbe">
+<span class="eqno">(1)<a class="headerlink" href="#equation-dacca16f-4905-4b7b-b2a3-708e8618cdbe" title="Permalink to this equation">¶</a></span>\[\begin{align}
+	s:	\mathbb{R}	&amp;\longrightarrow \mathbb{R}\\
+	    t  &amp;\longrightarrow s(t)
+\end{align}\]</div>
+</div>
+<div class="tip dropdown admonition">
+<p class="admonition-title">Définition : Signal numérique</p>
+<p>Un signal numérique est un signal à “temps discret”, c’est-à-dire qu’il n’est connu que pour des instants successifs. Sa représentation est alors une série de valeur successive (une suite):</p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+	s:	\mathbb{N}	&amp;\longrightarrow \mathbb{R}\\
+		n 			&amp;\longrightarrow s_{n}
+\end{align*}\]</div>
+<p>En général, l’indice n est associé à un temps de mesure.</p>
+</div>
+</div>
+<div class="section" id="signal-periodique">
+<h2>Signal périodique<a class="headerlink" href="#signal-periodique" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Signal périodique</p>
+<p>Un signal analogique est dit périodique s’il existe une grandeur T telle que pour tout instant t on a l’égalité: <span class="math notranslate nohighlight">\(s(t+T)=s(t)\)</span></p>
+<p>La grandeur T est appelée <strong>période</strong> du signal et son inverse f=1/T est la <strong>fréquence</strong> du signal (nombre de fois où le signal réalise les mêmes variations en une seconde).</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Valeur moyenne d’un signal périodique</p>
+<p>La valeur moyenne d’un signal périodique est définie par:</p>
+<div class="math notranslate nohighlight">
+\[
+\left\langle S \right\rangle = \frac{1}{T} \int_{t=0}^{t=T}S(t) dt
+\]</div>
+<p>On peut interpréter une telle valeur comme la valeur constante que devrait avoir une fonction constante qui aurait la même aire sous la courbe. D’où le nom de valeur moyenne.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Valeur efficace d’un signal périodique</p>
+<p>La valeur efficace d’un signal périodique est définie par:</p>
+<div class="math notranslate nohighlight">
+\[
+S_{eff} = \sqrt{\left\langle S^2 \right\rangle} = \sqrt{\frac{1}{T} \int_{t=0}^{t=T}S^2(t) dt}
+\]</div>
+<p>L’interprétation de cette grandeur est plus délicate (considérations énergétiques). Elle sera présentée par la suite.</p>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Propriété de la valeur moyenne (Admis)</p>
+<p>La valeur moyenne est un opérateur linéaire. Ainsi pour deux signaux <span class="math notranslate nohighlight">\(s_1(t)\)</span> et <span class="math notranslate nohighlight">\(s_2(t)\)</span>. La valeur moyenne du signal <span class="math notranslate nohighlight">\(s(t) = \lambda_1 s_1(t) + \lambda_2 s_2(t)\)</span> est :</p>
+<div class="math notranslate nohighlight">
+\[
+\left\langle s \right\rangle = \lambda_1 \left\langle s_1 \right\rangle + \lambda_2 \left\langle s_2 \right\rangle
+\]</div>
+<p><strong>Ce n’est pas le cas de la valeur efficace.</strong></p>
+</div>
+</div>
+<div class="section" id="calcul-valeur-efficace-et-valeur-moyenne">
+<h2>Calcul : valeur efficace et valeur moyenne<a class="headerlink" href="#calcul-valeur-efficace-et-valeur-moyenne" title="Permalink to this headline">¶</a></h2>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<ol class="simple">
+<li><p>Calculer la valeur moyenne puis efficace du signal “créneau” de période T, s(t) défini par:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+s(t) = \begin{cases} A \textrm{ si }x \in [0;T/2]\\ -A  \textrm{ si }x \in [T/2;T]\end{cases}
+\end{split}\]</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<blockquote>
+<div><p class="card-text">Valeur moyenne : On utilise la définition de la valeur moyenne et l’on sépare l’intégrale en deux parties :</p>
+<div class="math notranslate nohighlight">
+\[
+\left\langle s \right\rangle = \frac{1}{T} \left (\int_{t=0}^{t=T/2} A dt + \int_{t=T/2}^{t=T} - A dt \right ) = \frac{1}{T}(\frac{AT}{2} - \frac{AT}{2}) = 0
+\]</div>
+<p class="card-text">Valeur efficace : On utilise la définition de la valeur efficace et l’on sépare l’intégrale en deux parties :</p>
+<div class="math notranslate nohighlight">
+\[
+S_{eff} = \sqrt{\int_{t=0}^{t=T/2} A^2 dt + \int_{t=T/2}^{t=T} {(- A)}^2 dt} = \sqrt{\frac{1}{T}(\frac{A^2T}{2} + \frac{A^2T}{2})} = A
+\]</div>
+</div></blockquote>
+</div>
+</details><div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Calculer la valeur moyenne puis efficace du signal “triangle” de période T, s(t) défini par:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+s(t) = \begin{cases} a (t - \frac{T}{4})  \textrm{ si }x \in [0;T/2]\\ -a (t - \frac{3T}{4})  \textrm{ si }x \in [T/2;T]\end{cases}
+\end{split}\]</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<blockquote>
+<div><p class="card-text">Valeur moyenne : On utilise la définition de la valeur moyenne et l’on sépare l’intégrale en deux parties :</p>
+<div class="math notranslate nohighlight">
+\[
+\left\langle s \right\rangle = \frac{1}{T}\left (\int_{t=0}^{t=T/2} a (t-T/4) dt + \int_{t=T/2}^{t=T} - a (t - 3T/4) dt \right ) = \frac{a}{T}(0 + 0) = 0
+\]</div>
+<p class="card-text">Valeur efficace : On utilise la définition de la valeur efficace et l’on sépare l’intégrale en deux parties :</p>
+<div class="math notranslate nohighlight">
+\[
+S_{eff} = \sqrt{\int_{t=0}^{t=T/2} a^2 {(t - T/4)}^2 dt + \int_{t=T/2}^{t=T} a^2 {(t - 3T/4)}^2 dt} = \sqrt{\frac{a^2}{T}(\frac{T^3}{96} + \frac{T^3}{96})} = \frac{aT}{4 \sqrt{3}}
+\]</div>
+</div></blockquote>
+</div>
+</details><div class="dropdown admonition danger">
+<p class="admonition-title">Danger</p>
+<p>On remarquera que <span class="math notranslate nohighlight">\(S_{eff} \ne \sqrt{\left\langle s \right\rangle}\)</span></p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../signaux.html" title="previous page">Description des signaux physiques</a>
+    <a class='right-next' id="next-link" href="sinusoides.html" title="next page">Signaux sinusoïdaux</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

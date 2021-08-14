@@ -1,0 +1,536 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Décomposition spectrale d’un signal physique &#8212; Signaux physiques</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/signaux/notebook/decomposition.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Exemples de spectres usuels" href="usuels.html" />
+    <link rel="prev" title="Signaux sinusoïdaux" href="sinusoides.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Signaux physiques</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signaux.html">
+   Description des signaux physiques
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="description.html">
+   Description générale
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="sinusoides.html">
+   Signaux sinusoïdaux
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Décomposition spectrale d’un signal physique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="usuels.html">
+   Exemples de spectres usuels
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ex_app.html">
+   Exercices d’applications. signaux physiques
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.cedriclacpatia.fr">Site de la classe</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/decomposition.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/decomposition.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/decomposition.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#principe-de-la-decomposition-spectrale">
+   Principe de la décomposition spectrale
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spectre-d-une-fonction">
+   Spectre d’une fonction
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methode-etudier-une-modulation-en-amplitude">
+   Méthode : étudier une modulation en amplitude.
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#decomposition-des-signaux-periodiques-serie-de-fourier">
+   Décomposition des signaux périodiques : Série de Fourier
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#methode-tracer-le-spectre-d-un-signal-periodique">
+   Méthode : Tracer le spectre d’un signal périodique
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="decomposition-spectrale-d-un-signal-physique">
+<h1>Décomposition spectrale d’un signal physique<a class="headerlink" href="#decomposition-spectrale-d-un-signal-physique" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="principe-de-la-decomposition-spectrale">
+<h2>Principe de la décomposition spectrale<a class="headerlink" href="#principe-de-la-decomposition-spectrale" title="Permalink to this headline">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Principe général</p>
+<p>Le principe de la décomposition spectrale est de décomposer un signal <span class="math notranslate nohighlight">\(s(t)\)</span> en une somme de signaux sinusoïdaux de <strong>fréquences différentes.</strong></p>
+</div>
+<p>Ce principe présente énormément d’intérêt que nous verrons par la suite.</p>
+<p>Citons déjà qu’une fois un signal décomposé en somme de sinusoïde (on parle de <strong>composantes spectrales</strong>), on obtient plusieurs <strong>gammes de fréquences</strong> associées à chaque composante spectrale qui vont donner des informations sur le type de signal étudié.</p>
+<div class="note admonition">
+<p class="admonition-title">Exemples de décomposition spectrale : cas fini</p>
+<p>On peut décomposer un signal en une somme finie de signaux sinusoïdaux. Le signal <span class="math notranslate nohighlight">\(s(t) = A sin^3 (t)\)</span> peut s’écrire comme la somme :</p>
+<div class="math notranslate nohighlight">
+\[
+s(t) = \frac{3A}{4} \sin t - \frac{A}{4} \sin 3t 
+\]</div>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exemples de décomposition spectrale : cas infini discret</p>
+<p>On peut décomposer un signal en une somme infinie discrète de signaux sinusoïdaux. Le signal définie sur <span class="math notranslate nohighlight">\([0 ;T]\)</span> par</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+s(t) = \begin{cases} A \textrm{ si }x \in [0;T/2]\\ -A  \textrm{ si }x \in [T/2;T]\end{cases}
+\end{split}\]</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>et reproduit à l&#39;infini (signal créneau) peut s&#39;écrire comme la somme :
+</pre></div>
+</div>
+<div class="math notranslate nohighlight">
+\[
+s(t) = \frac{4 A}{\pi} \sum\limits_{n=0}^{+ \infty} \frac{1}{2n + 1} \sin{[(2n+1) \frac{2 \pi}{T}t]}
+\]</div>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Complément - Cas infini continu<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<p class="card-text">On peut décomposer un signal en une somme infinie continue de signaux sinusoïdaux, c’est-à-dire que la somme s’effectue sur toutes les valeurs de fréquences appartenant à <span class="math notranslate nohighlight">\(\mathbb{R}\)</span>. Une telle somme est plus délicate à écrire avec les connaissances actuelles car cela nécessite l’utilisation d’intégrale et des nombres complexes.</p>
+<p class="card-text">Néanmoins, à titre d’exemple, la fonction <span class="math notranslate nohighlight">\(s(t) = \frac{sin(t)}{t}\)</span> peut se décomposer comme une somme de sinusoïde de toutes les fréquences (réelles) comprises entre <span class="math notranslate nohighlight">\(f = 0\)</span> et <span class="math notranslate nohighlight">\(f = 1/2 Hz\)</span> avec la même amplitude pour chacune. Dans ce cas, on parlera de <strong>spectre continu</strong>.</p>
+</div>
+</details><div class="dropdown admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Comme le montre l’exemple du signal créneau, il convient de ne pas confondre la  <strong>période/fréquence/pulsation</strong> du signal si celui-ci est périodique et la <strong>période/fréquence/pulsation</strong> d’une composante spectrale de la décomposition. Il y a un lien entre ces grandeurs comme on le verra par la suite mais elles sont différentes et ne représentent pas la même chose.</p>
+</div>
+</div>
+<div class="section" id="spectre-d-une-fonction">
+<h2>Spectre d’une fonction<a class="headerlink" href="#spectre-d-une-fonction" title="Permalink to this headline">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Spectre d’un signal</p>
+<p>Pour une fonction s(t) à spectre discret, on appelle spectre de s, l’ensemble des couples <span class="math notranslate nohighlight">\(\{(f_s,c_S(f))\}\)</span> associant chaque fréquence f des sinusoïdes de la décomposition spectrale à leur amplitude <span class="math notranslate nohighlight">\(c_S(f)\)</span>.</p>
+<p>On représente le spectre d’une fonction s(t)  en représentant chaque coefficient <span class="math notranslate nohighlight">\(c_S(f)\)</span> en fonction de la fréquence correspondante <span class="math notranslate nohighlight">\(f_s\)</span>.</p>
+<p>L’indice s est marqué ici pour bien montrer que les fréquences et les amplitudes dépendent du signal s considéré.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Cas de la fonction sinus cube</p>
+<div class="figure align-center" id="sinus-cube">
+<img alt="../_images/spectre_sinus_cube.png" src="../_images/spectre_sinus_cube.png" />
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Spectre du sinus cube</span><a class="headerlink" href="#sinus-cube" title="Permalink to this image">¶</a></p>
+</div>
+<p>Le spectre de la fonction <span class="math notranslate nohighlight">\(sin^3\)</span> est <span class="math notranslate nohighlight">\(\{(f_1 = \frac{1}{2\pi}, c(f_1) =\frac{3}{4}),(f_2 = \frac{3}{2\pi}, c(f_2) =\frac{1}{4})\}\)</span>.</p>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Remarques<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ul class="simple">
+<li><p class="card-text">On pourrait écrire plus simplement <span class="math notranslate nohighlight">\(\{(\frac{1}{2\pi}, \frac{3}{4}),( \frac{3}{2\pi}, \frac{1}{4})\}\)</span></p></li>
+<li><p class="card-text">On tient pas compte du signe (-) car__ l’amplitude est toujours définie comme positive__. Le signe modifie la phase à l’origine (de <span class="math notranslate nohighlight">\(\pi\)</span>) mais celà n’apparaît pas dans le spectre.</p></li>
+</ul>
+</div>
+</details></div>
+<div class="note admonition">
+<p class="admonition-title">Cas de la fonction créneau</p>
+<div class="figure align-center" id="spectre-creneau">
+<img alt="../_images/spectre_creneau.png" src="../_images/spectre_creneau.png" />
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Spectre d’un créneau</span><a class="headerlink" href="#spectre-creneau" title="Permalink to this image">¶</a></p>
+</div>
+<p>Le spectre de la fonction créneau <span class="math notranslate nohighlight">\(s(t) = \begin{cases} A \textrm{ si }x \in [0;T/2]\\ -A  \textrm{ si }x \in [T/2;T]\end{cases}\)</span> fait correspondre aux fréquences <span class="math notranslate nohighlight">\(\frac{2n+1}{T}\)</span> l’amplitude <span class="math notranslate nohighlight">\(\frac{4A}{\pi(2n+1)}\)</span> avec <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p>
+<p>On peut tracer le spectre en remarquant qu’il s’agit de tracer la fonction <span class="math notranslate nohighlight">\(\frac{4A}{\pi T f}\)</span> en fonction de la fréquence <span class="math notranslate nohighlight">\(f\)</span> et de ne prendre que les valeurs entières impaires.</p>
+</div>
+<div class="dropdown admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Valeur moyenne</strong></p>
+<p>Sur une représentation spectrale, la valeur moyenne se lit à la fréquence 0.</p>
+</div>
+</div>
+<div class="section" id="methode-etudier-une-modulation-en-amplitude">
+<h2>Méthode : étudier une modulation en amplitude.<a class="headerlink" href="#methode-etudier-une-modulation-en-amplitude" title="Permalink to this headline">¶</a></h2>
+<p>Nous allons étudier le principe sur un cas simple où un signal se décompose en une somme finie de composantes spectrales\footnote{<strong>Composante spectrale</strong> - Une composante spectrale est une fonction sinusoïdale sommée avec d’autres composantes pour donner un signal s(t).</p>
+<p>La <strong>méthode de linéarisation</strong> des produits de sinusoïdes, basées sur les relations usuelles en trigonométrie est à maîtriser impérativement. La méthode de tracé du signal est aussi très important.</p>
+<p>On considère deux signaux sinusoïdaux <span class="math notranslate nohighlight">\(u_1(t)\)</span> et <span class="math notranslate nohighlight">\(u_2(t)\)</span> de fréquence <span class="math notranslate nohighlight">\(f_1\)</span> et <span class="math notranslate nohighlight">\(f_2\)</span> d’amplitude <span class="math notranslate nohighlight">\(u_{1m}\)</span> et <span class="math notranslate nohighlight">\(u_{2m}\)</span> de phase à l’origine nulle tous les deux. On multiplie les deux signaux <span class="math notranslate nohighlight">\(u_S(t) = k u_1(t) \times u_2(t)\)</span> avec k une constante connue.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<ul class="simple">
+<li><p>Donner les expressions de <span class="math notranslate nohighlight">\(u_1(t)\)</span> et <span class="math notranslate nohighlight">\(u_2(t)\)</span> puis de <span class="math notranslate nohighlight">\(u_S(t)\)</span></p></li>
+<li><p>On prend <span class="math notranslate nohighlight">\(f_1 = 10 f_2\)</span> et <span class="math notranslate nohighlight">\(u_{2m} = 2 u_{1m}\)</span>, représenter graphiquement <span class="math notranslate nohighlight">\(u_S\)</span>. Justifier le terme de modulation en amplitude. Où ce principe est utilisé?</p></li>
+<li><p>Montrer que le signal se décompose comme la somme de deux composantes spectrales dont on déterminera la fréquence et l’amplitude.</p></li>
+<li><p>Représenter le spectre du signal <span class="math notranslate nohighlight">\(u_S\)</span>.</p></li>
+</ul>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<blockquote>
+<div><p class="card-text"><strong>1.</strong>
+Les deux signaux entrant s’écrivent : <span class="math notranslate nohighlight">\(u_1(t) = u_{1m} \cos (2 \pi f_1 t)\)</span> et <span class="math notranslate nohighlight">\(u_2(t) = u_{2m} \cos (2 \pi f_2 t)\)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p class="card-text">Il vient pour le signal de sortie : <span class="math notranslate nohighlight">\(u_S(t) = k u_{1m} u_{2m} \cos (2 \pi f_1 t) \cos (2 \pi f_2 t) \)</span></p>
+</div></blockquote>
+<blockquote>
+<div><p class="card-text"><strong>2.</strong></p>
+</div></blockquote>
+<div class="tip admonition">
+<p class="admonition-title">Méthode</p>
+<p class="card-text">On doit savoir quand on est face à une telle fonction : il s’agit d’un <strong>produit</strong> de sinusoïde et <strong>la fréquence de l’un est grande devant la fréquence de l’autre</strong>.</p>
+<p class="card-text">On peut écrire <span class="math notranslate nohighlight">\(u_S(t)\)</span> sous la forme : <span class="math notranslate nohighlight">\( \left [ k u_{1m} u_{2m} \cos (2 \pi f_2 t) \right ] \cos (2 \pi f_1 t)\)</span>. Puisque <span class="math notranslate nohighlight">\(f_2\)</span> est faible, on peut considérer que sur une période du signal rapide de fréquence <span class="math notranslate nohighlight">\(f_1\)</span>, la grandeur <span class="math notranslate nohighlight">\(k u_{1m} u_{2m} \cos (2 \pi f_2 t)\)</span> est quasi-constante et représente donc sur une période, l’amplitude du sinusoïde <span class="math notranslate nohighlight">\( \cos (2 \pi f_1 t)\)</span>. Mais comme d’une période à l’autre l’amplitude varie, on parle de <strong>modulation d’amplitude</strong>.</p>
+<p class="card-text">Le signal lent de fréquence <span class="math notranslate nohighlight">\(f_2\)</span> est appelé <strong>signal modulant</strong> et le signal rapide est appelé <strong>signal porteur.</strong> Le signal sortant est appelé <strong>signal modulé</strong>.</p>
+</div>
+<blockquote>
+<div><p class="card-text">Le tracé d’une telle fonction ne doit pas nécessiter une calculatrice et doit faire apparaître des caractéristiques précises :</p>
+<ul class="simple">
+<li><p class="card-text">On commence par tracer l’<strong>enveloppe</strong> (trait discontinu) qui correspond à l’amplitude variable <span class="math notranslate nohighlight">\(k u_{1m} u_{2m} \cos (2 \pi f_2 t)\)</span> et son opposé (la fonction <span class="math notranslate nohighlight">\(u_S(t)\)</span> atteindra ces enveloppes quand <span class="math notranslate nohighlight">\(\cos (2 \pi f_1 t)\)</span> sera égale à 1 et -1. Cela dessine les valeurs maximales accessibles, d’où le nom d’enveloppe. Il faut repérer les valeurs maximales et minimales de l’enveloppe, ici <span class="math notranslate nohighlight">\(k u_{1m} u_{2m}\)</span> et  <span class="math notranslate nohighlight">\(-k u_{1m} u_{2m}\)</span></p></li>
+<li><p class="card-text">On trace alors la fonction comme un sinusoïde contenu dans l’enveloppe. Il faut faire attention au nombre de sinusoïde dans une période (il doit ici y en avoir 10 car <span class="math notranslate nohighlight">\(f_1 = 10 f_2\)</span>)</p></li>
+</ul>
+</div></blockquote>
+<div class="figure align-center" id="modulation">
+<img alt="../_images/temporelle_module.png" src="../_images/temporelle_module.png" />
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Modulation d’amplitude</span><a class="headerlink" href="#modulation" title="Permalink to this image">¶</a></p>
+</div>
+<blockquote>
+<div><p class="card-text"><strong>3.</strong>
+Pour obtenir le spectre lorsque le signal est un produit de sinusoïde, il faut procéder par <strong>linéarisation</strong>.</p>
+<div class="math notranslate nohighlight">
+\[
+u_S(t) = \frac{k u_{1m} u_{2m} }{2} \left( \cos(2 \pi (f_1 + f_2) t) + \cos(2\pi (f_1 - f_2)t) \right)
+\]</div>
+<p class="card-text">Le spectre est donc composée de deux composantes de fréquences <span class="math notranslate nohighlight">\(f_1 + f_2 = 11 f_2\)</span> et <span class="math notranslate nohighlight">\(f_1 - f_2 = 9 f_2\)</span>. Elles ont toutes les deux une amplitude <span class="math notranslate nohighlight">\( \frac{k u_{1m} u_{2m} }{2} \)</span>.</p>
+</div></blockquote>
+<div class="figure align-center" id="spectre-mod">
+<img alt="../_images/spectre_module.png" src="../_images/spectre_module.png" />
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Spectre du signal modulé</span><a class="headerlink" href="#spectre-mod" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details></div>
+<div class="section" id="decomposition-des-signaux-periodiques-serie-de-fourier">
+<h2>Décomposition des signaux périodiques : Série de Fourier<a class="headerlink" href="#decomposition-des-signaux-periodiques-serie-de-fourier" title="Permalink to this headline">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Décomposition en série de Fourier</p>
+<p>Tout signal périodique s(t) de période T se décompose en une somme infinie (série) de cosinus et de sinus de périodes T/n où n est un entier. On appelle la série correspondante: série de Fourier.</p>
+<div class="math notranslate nohighlight">
+\[
+s(t) = a_0 + \sum\limits_{n=1}^{+ \infty} (a_s(n) \cos(\frac{2 \pi n}{T}t)+b_s(n) \sin(\frac{2 \pi n}{T}t))
+\]</div>
+<p>Ou, comme on l’écrira souvent pour pouvoir représenter le spectre :</p>
+<div class="math notranslate nohighlight">
+\[
+s(t) = a_0 + \sum\limits_{n=1}^{+ \infty} (c_s(n) \cos(\frac{2 \pi n}{T}t + \phi_s(n)))
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+s(t) = a_0 + \sum\limits_{n=1}^{+ \infty} (c_s(n) \sin(\frac{2 \pi n}{T}t + \psi_s(n)))
+\]</div>
+<p>Les coefficients <span class="math notranslate nohighlight">\(c_s(n)\)</span> sont les amplitudes des composantes spectrales comme étudiées précédemment. On les définit ici directement en fonction de n qui correspond au rang de la n-ième composante spectrale et on les appelle des <strong>coefficients de Fourier</strong>.</p>
+<p>Dans le cas d’un signal périodique, ces composantes sont appelées des <strong>harmoniques</strong>. La composante spectrale de même période que le signal (elle existe forcément) est appelée <strong>fondamental.</strong></p>
+<p>On reconnaîtra que <span class="math notranslate nohighlight">\(a_0\)</span> correspond à la valeur moyenne du signal.</p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Exemple : Spectre du signal triangle</p>
+<p>Outre le cas du signal créneau, on peut aussi citer le cas du signal triangle <span class="math notranslate nohighlight">\(s(t) = \begin{cases} a (t - \frac{T}{4})  \textrm{ si }x \in [0;T/2]\\ -a (t - \frac{3T}{4})  \textrm{ si }x \in [T/2;T]\end{cases}\)</span> dont les coefficients de Fourier sont <span class="math notranslate nohighlight">\(c_s(n) = \frac{8aT}{\pi^2 n^2}\)</span> lorsque n est impaire et 0 sinon.</p>
+<p>On remarquera et c’est important de le retenir que les harmoniques du signal créneau ont une amplitude qui décroît en <span class="math notranslate nohighlight">\(1/n\)</span> et les harmoniques du triangle ont une amplitude qui décroît en <span class="math notranslate nohighlight">\(1/n^2\)</span> : on tend donc plus vite vers la forme triangle que vers la forme créneau.</p>
+</div>
+<div class="dropdown admonition hint">
+<p class="admonition-title">Hint</p>
+<p>Vous pourrez trouver ici une <a class="reference external" href="https://www.geogebra.org/m/R4FGkE3u">simulation réalisée en Geogebra</a> permettant de construction une fonction périodique par sommation de ses composantes de Fourier.</p>
+</div>
+</div>
+<div class="section" id="methode-tracer-le-spectre-d-un-signal-periodique">
+<h2>Méthode : Tracer le spectre d’un signal périodique<a class="headerlink" href="#methode-tracer-le-spectre-d-un-signal-periodique" title="Permalink to this headline">¶</a></h2>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On reprend le signal triangle :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+s(t) = \begin{cases} a (t - \frac{T}{4})  \textrm{ si }x \in [0;T/2]\\ -a (t - \frac{3T}{4})  \textrm{ si }x \in [T/2;T]\end{cases}
+\end{split}\]</div>
+<p>dont la décomposition en série de Fourier est :</p>
+<div class="math notranslate nohighlight">
+\[
+s(t) = \frac{8 a T}{\pi^2} \sum\limits_{n=0}^{+ \infty} \frac{1}{(2n + 1)^2} \sin{[(2n+1) \frac{2 \pi}{T}t]}
+\]</div>
+<ol class="simple">
+<li><p>Justifier que ce signal est périodique de période T.</p></li>
+<li><p>Représenter le spectre du signal.</p></li>
+</ol>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction - Méthode<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<ol class="simple">
+<li><p class="card-text"><strong>Période du signal</strong> : Dans une décomposition en série de Fourier, la période du signal correspond à la période du fondamental, donc de la composante de plus basse fréquence. Ici, c’est pour n=0, soit une pulsation (on ne peut lire directement qu’une pulsation) <span class="math notranslate nohighlight">\(\frac{2\pi}{T}\)</span> donc une période T</p></li>
+<li><p class="card-text"><strong>Tracé du spectre</strong> : La méthode pour tracé un spectre connaissant la décomposition spectrale est :</p>
+<ol class="simple">
+<li><p class="card-text"><em>Déterminer les pulsations puis les fréquences qui composent le spectre.</em> On a ici une série. La pulsation de chaque terme se lit dans le sinus <span class="math notranslate nohighlight">\(\sin[\boxed{(2 n +1) \frac{2\pi}{T}} t]\)</span>. Les pulsations du signal sont donc les pulsations <span class="math notranslate nohighlight">\((2 n +1) \frac{2\pi}{T}\)</span> donc les fréquences <span class="math notranslate nohighlight">\(f_n = \frac{2n+1}{T}\)</span>. On peut alors placer les fréquences sur un graphique.</p></li>
+</ol>
+</li>
+</ol>
+<div class="figure align-center" id="triangle-freq">
+<img alt="../_images/spectre_triangle_freq.png" src="../_images/spectre_triangle_freq.png" />
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Fréquences du signal</span><a class="headerlink" href="#triangle-freq" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p class="card-text"><em>Déterminer les amplitudes associées à des fréquences.</em> Si les fréquences sont isolées, on lit l’amplitude comme le facteur devant le sinus/cosinus. Dans le cas d’une somme, on va déterminer la fonction qui associe le n-ième rang (puis la fréquence) à l’amplitude. Ici l’amplitude de chaque sinusoïde a pour expression <span class="math notranslate nohighlight">\(c(n) = \frac{8aT}{\pi^2(2n+1)^2}\)</span>. L’étude précédente (<span class="math notranslate nohighlight">\(2n+1 = f_n T\)</span>) permet d’exprimer <span class="math notranslate nohighlight">\(c_n\)</span> en fonction de <span class="math notranslate nohighlight">\(f_n\)</span>:</p></li>
+</ol>
+<p class="card-text"><span class="math notranslate nohighlight">\(c(f_n) = \frac{8aT}{\pi^2 T^2 f_n^2}\)</span></p>
+<p class="card-text">On trace alors la fonction <span class="math notranslate nohighlight">\(c(f)\)</span> et on trace des traits représentant les amplitudes pour les composantes spectrales réellement présentes.</p>
+<div class="figure align-center" id="triangle-freq-2">
+<img alt="../_images/spectre_triangle.png" src="../_images/spectre_triangle.png" />
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Fréquences du signal</span><a class="headerlink" href="#triangle-freq-2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</details></div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="sinusoides.html" title="previous page">Signaux sinusoïdaux</a>
+    <a class='right-next' id="next-link" href="usuels.html" title="next page">Exemples de spectres usuels</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

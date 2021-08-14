@@ -1,0 +1,632 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signaux sinusoïdaux &#8212; Signaux physiques</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8e5499552300ddf5d7adccae7cc3b70.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/signaux/notebook/sinusoides.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Décomposition spectrale d’un signal physique" href="decomposition.html" />
+    <link rel="prev" title="Description générale" href="description.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      <h1 class="site-logo" id="site-title">Signaux physiques</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signaux.html">
+   Description des signaux physiques
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="description.html">
+   Description générale
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Signaux sinusoïdaux
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="decomposition.html">
+   Décomposition spectrale d’un signal physique
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="usuels.html">
+   Exemples de spectres usuels
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ex_app.html">
+   Exercices d’applications. signaux physiques
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <a href="https://www.cedriclacpatia.fr">Site de la classe</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/sinusoides.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/sinusoides.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/sinusoides.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#signal-sinusoidal-representation-de-fresnel">
+   Signal sinusoïdal - Représentation de Fresnel
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methode-etudier-les-caracteristiques-d-un-sinusoide">
+     Méthode - Etudier les caractéristiques d’un sinusoïde
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#propriete-valeurs-moyennes-et-efficaces-des-sinusoides">
+   Propriété : Valeurs moyennes et efficaces des sinusoïdes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dephasage-en-signaux-sinusoidaux">
+   Déphasage en signaux sinusoïdaux
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methode-calculer-un-dephasage">
+     Méthode: Calculer un déphasage
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#interet-des-signaux-sinusoidaux">
+   Intérêt des signaux sinusoïdaux
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="signaux-sinusoidaux">
+<h1>Signaux sinusoïdaux<a class="headerlink" href="#signaux-sinusoidaux" title="Permalink to this headline">¶</a></h1>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Forme mathématique d’un signal sinusoïdal</p>
+<p>Un signal analogique est dit sinusoïdal, si la fonction décrivant la grandeur associée est de la forme :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3369ae46-3098-4572-8ac8-ec924e084496">
+<span class="eqno">(2)<a class="headerlink" href="#equation-3369ae46-3098-4572-8ac8-ec924e084496" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+s(t) = S_m \cos \left ( \omega t +\phi_0 \right )
+\end{equation}\]</div>
+</div>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Caractéristiques d’un signal sinusoïdal</p>
+<p>L’expression mathématique précédente fait apparaître des caractéristiques d’un sinusoïde :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(S_m\)</span> est appelée amplitude du signal.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\omega t +\phi\)</span> est appellée phase du signal.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\omega\)</span> est la pulsation du signal, elle est reliée à la période et la fréquence du signal <span class="math notranslate nohighlight">\(T=\frac{2 \pi}{\omega}=\frac{1}{f}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\phi\)</span> est appelée phase à l’origine. Il correspond à la phase du signal à <span class="math notranslate nohighlight">\(t=0\)</span> (ou à l’écart de phase, déphasage, (en radians) avec une fonction sinusoïdal qui serait ici maximale en <span class="math notranslate nohighlight">\(t=0\)</span>).</p></li>
+</ul>
+<div class="figure align-center" id="sinusoide">
+<img alt="../_images/sinusoide_vm_0.png" src="../_images/sinusoide_vm_0.png" />
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Sinusoïde</span><a class="headerlink" href="#sinusoide" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="dropdown admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>On peut utilise la fonction <span class="math notranslate nohighlight">\(sin\)</span> au lieu de la fonction cosinus. Il faudra néanmoins adapter la notion de phase à l’origine.</p></li>
+<li><p>Il arrive qu’on désigne comme signal sinusoïdal un signal de forme <span class="math notranslate nohighlight">\(s(t) = S_m \cos{(\omega t +\phi)} + S_0\)</span> où <span class="math notranslate nohighlight">\(S_0\)</span> est appelé valeur moyenne. Ceci est notamment important en TP. Le terme de valeur moyenne a, comme on le verra ensuite, le même sens que la définition précédente.</p></li>
+<li><p>Un signal constant <span class="math notranslate nohighlight">\(S_0\)</span> peut être vu comme un signal sinusoïdal de fréquence\ldots  nulle. Cette conception sera fondamental pour la suite.</p></li>
+</ul>
+</div>
+<div class="dropdown admonition attention">
+<p class="admonition-title">Attention</p>
+<p><strong>L’amplitude n’est PAS l’écart à l’axe des abscisses dans le cas général.</strong> Si l’on considère le cas où l’on a ajouté une valeur moyenne, ce n’est pas vrai.</p>
+<div class="figure align-center" id="sinusoide-l">
+<a class="reference internal image-reference" href="../_images/sinusoide_vm_1.png"><img alt="../_images/sinusoide_vm_1.png" src="../_images/sinusoide_vm_1.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Sinusoïde avec valeur moyenne</span><a class="headerlink" href="#sinusoide-l" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="signal-sinusoidal-representation-de-fresnel">
+<h2>Signal sinusoïdal - Représentation de Fresnel<a class="headerlink" href="#signal-sinusoidal-representation-de-fresnel" title="Permalink to this headline">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Représentation de Fresnel d’un signal sinusoïdal</p>
+<p>La représentation de Fresnel de la grandeur sinusoïdale s(t) à l’instant t est la représentation dans un plan d’un vecteur <span class="math notranslate nohighlight">\(\overrightarrow{S}\)</span> tel que :</p>
+<ul class="simple">
+<li><p>la norme est l’amplitude de s(t) <span class="math notranslate nohighlight">\(S_m\)</span></p></li>
+<li><p>le vecteur fait avec l’axe des abscisses un angle <span class="math notranslate nohighlight">\(\phi = \omega t + \phi_0\)</span> soit la phase du signal.</p></li>
+</ul>
+<div class="figure align-center" id="fresnel-fixe">
+<a class="reference internal image-reference" href="../_images/fresnel_fixe.png"><img alt="../_images/fresnel_fixe.png" src="../_images/fresnel_fixe.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Représentation de Fresnel</span><a class="headerlink" href="#fresnel-fixe" title="Permalink to this image">¶</a></p>
+</div>
+<p>Très souvent, on travaillera avec la représentation de Fresnel à l’instant <span class="math notranslate nohighlight">\(t=0\)</span>.</p>
+</div>
+<div class="dropdown admonition note">
+<p class="admonition-title">Note</p>
+<div class="figure align-center" id="fresnel-mobile">
+<img alt="../_images/fresnel.gif" src="../_images/fresnel.gif" />
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Evolution temporelle</span><a class="headerlink" href="#fresnel-mobile" title="Permalink to this image">¶</a></p>
+</div>
+<p>Remarquons que lorsque le temps avance, la phase augmente et l’amplitude est constante. La représentation de Fresnel tourne. La vitesse angulaire de rotation dans le plan de Fresnel est la pulsation <span class="math notranslate nohighlight">\(\omega\)</span>. D’où l’intérêt de cette grandeur.</p>
+<p>Au bout d’une période, la phase a tourner de <span class="math notranslate nohighlight">\(2\pi\)</span> soit une variation de phase <span class="math notranslate nohighlight">\(\Delta \phi = \omega T = 2 \pi\)</span>. D’où la relation entre période et pulsation.</p>
+</div>
+<div class="section" id="methode-etudier-les-caracteristiques-d-un-sinusoide">
+<h3>Méthode - Etudier les caractéristiques d’un sinusoïde<a class="headerlink" href="#methode-etudier-les-caracteristiques-d-un-sinusoide" title="Permalink to this headline">¶</a></h3>
+<p>L’objectif est</p>
+<ul class="simple">
+<li><p>d’apprendre à écrire correctement l’expression mathématique d’un sinusoïde connaissant ou en mesurant ses caractéristiques.</p></li>
+<li><p>de faire l’inverse : obtenir les caractéristiques d’un sinusoïde et tracer son graphique à partir de son expression mathématique.</p></li>
+</ul>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Donner l’expression mathématique s(t):</p>
+<ol class="simple">
+<li><p>d’un sinusoïde de pulsation <span class="math notranslate nohighlight">\(4\omega\)</span>, d’amplitude 2a et de phase à l’origine <span class="math notranslate nohighlight">\(-\pi/5\)</span>.</p></li>
+<li><p>d’un sinusoïde de période <span class="math notranslate nohighlight">\(2T/3\)</span>, d’amplitude 4a (si rien n’est précisé, on considère que la phase à l’origine est nulle).</p></li>
+<li><p>d’un sinusoïde de fréquence 3f, d’amplitude 2a, de valeur moyenne - <span class="math notranslate nohighlight">\(S_1\)</span> et de phase à l’origine <span class="math notranslate nohighlight">\(\pi/3\)</span>.</p></li>
+</ol>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<blockquote>
+<div><ol class="simple">
+<li><p class="card-text"><span class="math notranslate nohighlight">\(s(t) = 2a \cos {(4 \omega t - \frac{\pi}{5})}\)</span></p></li>
+<li><p class="card-text">La pulsation vaut alors <span class="math notranslate nohighlight">\(\omega = \frac{6\pi}{2T}\)</span> donc <span class="math notranslate nohighlight">\(s(t) = 4a \cos {(\frac{3\pi}{T} t )}\)</span></p></li>
+<li><p class="card-text">La pulsation vaut alors <span class="math notranslate nohighlight">\(\omega = 2\pi \times 3f\)</span> donc <span class="math notranslate nohighlight">\(s(t) = 2a \cos {(6\pi f t + \frac{\pi}{3})} - S_1\)</span></p></li>
+</ol>
+</div></blockquote>
+</div>
+</details><div class="dropdown admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Il faut faire attention à bien différencier le sens physique d’une grandeur et les notations utilisées. Ainsi, même si dans cet exercice on utilise les notations T et f, elles <strong>ne correspondent pas</strong> aux périodes et fréquences des signaux. Le sens physique s’obtient par analyse des équations mathématiques, pas par analyse du nom de la grandeur.</p>
+<p>On essaiera par contre de conserver des noms de grandeurs cohérentes avec l’unité (T reste un temps et f une fréquence). Mais même sur ce point, le sens physique est très important (une même notation pouvant être utilisée pour deux grandeurs : R peut être un rayon ou une résistance électrique…</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Réaliser la représentation graphique de s(t) pour les expressions précédentes. On prendra a=1, T=1, <span class="math notranslate nohighlight">\(\omega = \pi\)</span>, f=1, <span class="math notranslate nohighlight">\(S_1=2\)</span></p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<div class="figure align-center" id="sinus-trace">
+<img alt="../_images/sinusoide_trace.png" src="../_images/sinusoide_trace.png" />
+</div>
+</div>
+</details><div class="dropdown admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Lien retard temporel et phase</strong></p>
+<p>La valeur moyenne déterminer l’axe de symétrie du sinusoïde et l’amplitude l’écart à cet axe de symétrie (les valeurs extrêmes).</p>
+<p>On a utilisé la relation <span class="math notranslate nohighlight">\(\phi_0 = - \omega t_1\)</span> pour calculer le retard temporel où <span class="math notranslate nohighlight">\(t_1\)</span> est le temps où la fonction cosinus sera maximale (puisque la phase est alors nulle).</p>
+<p>On a ensuite représenté des points particuliers pour faciliter le tracé (points extrêmes, passage par la valeur moyenne) en utilisant la valeur de la période de chaque signal à partir de <span class="math notranslate nohighlight">\(t_1\)</span>.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Donner les caractéristiques (période, fréquence, pulsation, amplitude, valeur moyenne, phase à l’origine) des signaux suivants :</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(s(t) = \frac{1}{2k + 1} \sin{(2k+1) \omega t}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(s(t) = 7\omega \cos(2f t + 3)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(s(t) = 3a \cos(\frac{2\pi n}{T}t) + 4c\)</span></p></li>
+</ol>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<blockquote>
+<div><p class="card-text">La lecture des caractéristiques ne se fait pas par rapport au nom des grandeurs mais à leur position dans la structure mathématique. Ainsi :</p>
+<ul class="simple">
+<li><p class="card-text">L’amplitude est le facteur multiplicatif du sinusoïde <span class="math notranslate nohighlight">\(\boxed{A}\sin \omega t + \phi\)</span>.</p></li>
+<li><p class="card-text">La pulsation est le facteur multiplicatif devant le temps <span class="math notranslate nohighlight">\(A\sin \boxed{\omega} t + \phi\)</span>.</p>
+<ol class="simple">
+<li><p class="card-text"><span class="math notranslate nohighlight">\(s(t) = \boxed{\frac{1}{2k + 1}} \sin{\boxed{(2k+1) \omega} t} \)</span> donc</p>
+<ul>
+<li><p class="card-text">Amplitude : <span class="math notranslate nohighlight">\(\frac{1}{2k + 1}\)</span></p></li>
+<li><p class="card-text">Pulsation<span class="math notranslate nohighlight">\((2k + 1) \omega\)</span></p></li>
+<li><p class="card-text">Période : <span class="math notranslate nohighlight">\(\frac{2\pi}{(2k+1)\omega}\)</span></p></li>
+<li><p class="card-text">Fréquence : <span class="math notranslate nohighlight">\(\frac{(2k+1) \omega}{2 \pi}\)</span></p></li>
+<li><p class="card-text">Valeur moyenne nulle</p></li>
+<li><p class="card-text">Phase à l’origine nulle</p></li>
+</ul>
+</li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(s(t) = \boxed{7\omega} \cos(\boxed{2f} t + 3)\)</span></p>
+<ul>
+<li><p class="card-text">Amplitude : <span class="math notranslate nohighlight">\(7 \omega\)</span></p></li>
+<li><p class="card-text">Pulsation<span class="math notranslate nohighlight">\(2f\)</span></p></li>
+<li><p class="card-text">Période : <span class="math notranslate nohighlight">\(\frac{2\pi}{2f}\)</span></p></li>
+<li><p class="card-text">Fréquence : <span class="math notranslate nohighlight">\(\frac{f}{\pi}\)</span></p></li>
+<li><p class="card-text">Valeur moyenne nulle</p></li>
+<li><p class="card-text">Phase à l’origine : 3</p></li>
+</ul>
+</li>
+<li><p class="card-text"><span class="math notranslate nohighlight">\(s(t) = \boxed{3a} \cos(\boxed{\frac{2\pi n}{T}}t) + 4c\)</span></p>
+<ul>
+<li><p class="card-text">Amplitude : <span class="math notranslate nohighlight">\(3a\)</span></p></li>
+<li><p class="card-text">Pulsation<span class="math notranslate nohighlight">\(\frac{2 \pi n}{T}\)</span></p></li>
+<li><p class="card-text">Période : <span class="math notranslate nohighlight">\(T/n\)</span></p></li>
+<li><p class="card-text">Fréquence : <span class="math notranslate nohighlight">\(\frac{n}{T}\)</span></p></li>
+<li><p class="card-text">Valeur moyenne 4c</p></li>
+<li><p class="card-text">Phase à l’origine : nulle</p></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</div></blockquote>
+</div>
+</details></div>
+</div>
+<div class="section" id="propriete-valeurs-moyennes-et-efficaces-des-sinusoides">
+<h2>Propriété : Valeurs moyennes et efficaces des sinusoïdes<a class="headerlink" href="#propriete-valeurs-moyennes-et-efficaces-des-sinusoides" title="Permalink to this headline">¶</a></h2>
+<div class="important admonition">
+<p class="admonition-title">Fondamental</p>
+<p>La valeur moyenne d’un signal sinusoïdal de la forme <span class="math notranslate nohighlight">\(s(t) = S_m \cos{(\omega t + \phi)}\)</span> est <strong>nulle</strong>.</p>
+<p>Si l’on ajoute au signal une valeur constante <span class="math notranslate nohighlight">\(S_0\)</span>, alors__ la valeur moyenne est ____<span class="math notranslate nohighlight">\(S_0\)</span>__, d’où le nom de valeur moyenne.</p>
+<p>La valeur efficace d’un signal sinusoïdal de la forme <span class="math notranslate nohighlight">\(s(t) = S_m \cos{(\omega t + \phi)}\)</span> est :</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{S_m}{\sqrt{2}}
+\]</div>
+</div>
+<blockquote>
+<div><p><strong>Démonstration</strong></p>
+<ul class="simple">
+<li><p>Pour la valeur moyenne :</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\left\langle s \right\rangle &amp;= \frac{1}{T} \int_{t=0}^{t=T} S_m \cos{(\omega t + \phi)} dt\\
+&amp;= \frac{S_m}{T} \left[ \frac{1}{\omega} \sin{(\omega t + \phi)}\right]_{0}^{T}\\
+&amp;= 0
+\end{align*}\]</div>
+<p>La valeur moyenne d’une constante <span class="math notranslate nohighlight">\(S_0\)</span> est cette constante. Comme la valeur moyenne est un opérateur linéaire, la valeur moyenne de la fonction <span class="math notranslate nohighlight">\(s(t) = S_m \cos{(\omega t + \phi)} + S_0\)</span> est donc bien <span class="math notranslate nohighlight">\(S_0\)</span>.</p>
+<ul class="simple">
+<li><p>Pour la valeur efficace :</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+S_{eff} &amp; = \sqrt{\frac{2}{T} \int_{t=0}^{t=T/2} S_m^2 \cos^2{(\omega t + \phi)} dt}\\
+&amp; =  \sqrt{\frac{2S_m^2 }{T} \int_{t=0}^{t=T/2} \frac{1}{2} \left ( \cos{2(\omega t + \phi)} + 1 \right) dt }\\
+&amp; = \sqrt{\frac{S^2_m}{T} {\left[ \frac{1}{2\omega} \sin{2(\omega t + \phi)}+ t\right]}_{0}^{T/2}}\\
+&amp; = \sqrt{\frac{S^2_m}{T} 2T} = \frac{S_m}{\sqrt{2}}
+\end{align*}\]</div>
+</div></blockquote>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Valeur efficace d’une somme de deux sinusoïdes</p>
+<p>Si l’on somme deux sinusoïdes de <strong>fréquences différentes</strong> et d’amplitude respectives <span class="math notranslate nohighlight">\(S_{1,eff}\)</span> et <span class="math notranslate nohighlight">\(S_{2,eff}\)</span> alors la valeur efficace de la somme sera :</p>
+<div class="math notranslate nohighlight">
+\[
+S_{eff} = \sqrt{S_{1,eff}^2 + S_{2,eff}^2}
+\]</div>
+</div>
+<blockquote>
+<div><p><strong>Démonstration</strong></p>
+<div class="amsmath math notranslate nohighlight" id="equation-3b904278-1f10-4698-838f-cfe7672bbc7f">
+<span class="eqno">(3)<a class="headerlink" href="#equation-3b904278-1f10-4698-838f-cfe7672bbc7f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+S_{eff} &amp;= \sqrt{\left\langle {(S_1(t) + S_2(t))}^2\right\rangle}\\
+			&amp;= \sqrt{\left\langle {S_1(t)}^2 + {S_2(t)}^2 + 2 S_1(t) S_2(t)\right\rangle}\\
+			&amp;= \sqrt{\left\langle{S_1(t)}^2\right\rangle + \left\langle{S_2(t)}^2\right\rangle + \left\langle2 S_1(t) S_2(t)\right\rangle}\\
+			&amp;= \sqrt{S_{1,eff}^2 + S_{2,eff}^2 + 2 S_1m S_2m \left\langle \cos{(\omega_1 t + \varphi_1)} \cos{(\omega_2 t + \varphi_2)} \right\rangle}\\
+			&amp;= \sqrt{S_{1,eff}^2 + S_{2,eff}^2 + S_1m S_2m \left\langle \cos{((\omega_1 + \omega_2) t + \varphi_1+\varphi_2)} \right\rangle + S_1m S_2m \left\langle  \cos{((\omega_1 - \omega_2) t + \varphi_1 - \varphi_2)} \right\rangle} \\
+			&amp;= \sqrt{S_{1,eff}^2 + S_{2,eff}^2 + 0 + 0}
+\end{align}\]</div>
+</div></blockquote>
+<div class="dropdown admonition attention">
+<p class="admonition-title">Attention</p>
+<p><strong>Si les deux sinusoïdes sont de même pulsation, la propriété n’est plus vraie,</strong> on peut s’en rendre compte en remarquant que le dernier terme (différences des phases) est alors un terme constant dont la valeur moyenne n’est pas forcément nulle.</p>
+</div>
+</div>
+<div class="section" id="dephasage-en-signaux-sinusoidaux">
+<h2>Déphasage en signaux sinusoïdaux<a class="headerlink" href="#dephasage-en-signaux-sinusoidaux" title="Permalink to this headline">¶</a></h2>
+<div class="tip admonition">
+<p class="admonition-title">Définition : Déphasage</p>
+<p>On considère deux signaux sinusoïdaux dont les phases sont <span class="math notranslate nohighlight">\(\varphi_1\)</span> et <span class="math notranslate nohighlight">\(\varphi_2\)</span>. Le déphasage <span class="math notranslate nohighlight">\(\Delta \varphi_{2/1}\)</span> du signal 2 sur le signal 1 est défini par</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta  \varphi_{2/1} = \varphi_2 - \varphi_1
+\]</div>
+</div>
+<p>On peut noter <span class="math notranslate nohighlight">\(\varphi_1 = \omega_1 t + \phi_{10} \)</span> et <span class="math notranslate nohighlight">\(\varphi_2 = \omega_2 t + \phi_{20}\)</span>. Il vient que le déphasage s’écrit :</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta \varphi_{2/1} = (\omega_2 - \omega_1) t + (\phi_{20} - \phi_{10})
+\]</div>
+<p>On observe que si les deux signaux sont de même fréquence/pulsation/période, alors le déphasage entre les deux est constant. Sinon, il varie.</p>
+<div class="note admonition">
+<p class="admonition-title">Exemple</p>
+<ul class="simple">
+<li><p>Si le déphasage entre deux signaux est nul, on dit que les signaux sont <strong>en phase</strong>.</p></li>
+<li><p>Si le déphasage entre deux signaux est égal à <span class="math notranslate nohighlight">\(\pi\)</span>, on dit que les signaux sont <strong>en opposition de phase</strong>: le maximum de l’un coïncide avec le minimum de l’autre et réciproquement.</p></li>
+<li><p>Si le déphasage entre deux signaux est égal à <span class="math notranslate nohighlight">\(\pm \pi/2\)</span>, on dit que les signaux sont <strong>en quadrature de phase</strong>: le maximum/minimum de l’un coïncide avec le 0 (ou le passage par la valeur moyenne) de l’autre et réciproquement.</p></li>
+</ul>
+</div>
+<div class="section" id="methode-calculer-un-dephasage">
+<h3>Méthode: Calculer un déphasage<a class="headerlink" href="#methode-calculer-un-dephasage" title="Permalink to this headline">¶</a></h3>
+<p>Le but de cet exercice est de comprendre la notion de déphasage et les méthodes d’études associées.</p>
+<div class="important admonition">
+<p class="admonition-title">Fondamental : Relation entre déphasage et retard temporel</p>
+<p>Soit deux signaux sinusoïdaux de même pulsation <span class="math notranslate nohighlight">\(\omega\)</span>, d’amplitude respectives <span class="math notranslate nohighlight">\(S_1\)</span> et <span class="math notranslate nohighlight">\(S_2\)</span> et de phase à l’origine respectives <span class="math notranslate nohighlight">\(\phi_1\)</span> et <span class="math notranslate nohighlight">\(\phi_2\)</span>. Le retard temporel <span class="math notranslate nohighlight">\(\Delta t\)</span> du signal 2 sur le signal 1, représentant l’écart temporel relatif entre deux points des signaux ayant la valeur est relié au déphasage par:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta \phi = - \omega  \Delta t
+\]</div>
+</div>
+<blockquote>
+<div><p><strong>Démonstration</strong>
+On cherche <span class="math notranslate nohighlight">\(\Delta t\)</span> tel que : <span class="math notranslate nohighlight">\(S_1 \cos (\omega t + \phi_1) = S_2 \cos (\omega (t + \Delta t) + \phi_2)\)</span> soit <span class="math notranslate nohighlight">\(\omega t + \phi_1 = \omega (t + \Delta t) + \phi_2\)</span> donc : <span class="math notranslate nohighlight">\(\omega \Delta t = \phi_1 - \phi_2 = - \Delta \phi_{2/1}\)</span></p>
+</div></blockquote>
+<div class="dropdown admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Dans le système d’unités S.I., l’unité d’angle est le <strong>radian</strong>.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Déterminer expérimentalement le déphasage du signal vert sur le signal rouge.</p>
+<div class="figure align-center" id="dephasage">
+<a class="reference internal image-reference" href="../_images/dephasage.png"><img alt="../_images/dephasage.png" src="../_images/dephasage.png" style="width: 75%;" /></a>
+</div>
+</div>
+<div class="dropdown admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Attention, <strong>on ne peut mesurer directement un déphasage (en radian) sur un graphique temporel. On mesure un retard temporel.</strong></p>
+</div>
+<details class="sphinx-bs dropdown card mb-3">
+<summary class="summary-title card-header">
+Correction<div class="summary-down docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-down" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M5.22 8.72a.75.75 0 000 1.06l6.25 6.25a.75.75 0 001.06 0l6.25-6.25a.75.75 0 00-1.06-1.06L12 14.44 6.28 8.72a.75.75 0 00-1.06 0z"></path></svg></div>
+<div class="summary-up docutils">
+<svg version="1.1" width="24" height="24" class="octicon octicon-chevron-up" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M18.78 15.28a.75.75 0 000-1.06l-6.25-6.25a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 101.06 1.06L12 9.56l5.72 5.72a.75.75 0 001.06 0z"></path></svg></div>
+</summary><div class="summary-content card-body docutils">
+<blockquote>
+<div><p class="card-text">Commençons par mesurer le <strong>retard temporel</strong> du signal vert sur le signal rouge. C’est une grandeur algébrique, il faut donc tenir compte de l’ordre des deux signaux. Ici, <strong>le signal vert est en avance, donc le retard est négatif.</strong></p>
+<p class="card-text">Ce retard se mesure entre deux points ayant la même valeur en ordonnée. Il est conseillé de mesurer le retard entre deux points où la fonction s’annule (ou atteint sa valeur moyenne) pour des questions de précision. On mesure ici <span class="math notranslate nohighlight">\(\Delta t = - 1.8 s\)</span>.</p>
+<p class="card-text">On doit ensuite utiliser la relation prouvée précédemment <span class="math notranslate nohighlight">\(\Delta \phi = - \omega \Delta t\)</span>. La pulsation s’obtient en mesurant la période. Ici T = 6s donc <span class="math notranslate nohighlight">\(\omega = \pi / 3= 1 \rm{rad.s^{-1}}\)</span>.</p>
+<p class="card-text">Il vient <span class="math notranslate nohighlight">\(\Delta \phi = 1.8 \rm{rad}\)</span></p>
+</div></blockquote>
+<div class="figure align-center" id="dephasage-c">
+<a class="reference internal image-reference" href="../_images/dephasage_c.png"><img alt="../_images/dephasage_c.png" src="../_images/dephasage_c.png" style="width: 50%;" /></a>
+</div>
+</div>
+</details></div>
+</div>
+<div class="section" id="interet-des-signaux-sinusoidaux">
+<h2>Intérêt des signaux sinusoïdaux<a class="headerlink" href="#interet-des-signaux-sinusoidaux" title="Permalink to this headline">¶</a></h2>
+<p>Les signaux sinusoïdaux sont extrêmement importants en physique. En effet, on les retrouve dans deux cas très répandus:</p>
+<ul class="simple">
+<li><p>Les oscillateurs harmoniques. A l’exemple des systèmes masse-ressort, ces systèmes ont une évolution sinusoïdal. Or nous verrons dans le cours de l’année que les oscillateurs harmoniques se retrouvent partout en physique.</p></li>
+<li><p>Tout signal physique peut être vu comme une somme de sinusoïdes d’amplitude, de fréquence et de phase à l’origine bien définie. C’est le principe de la décomposition spectrale qui va être présentée ensuite.</p></li>
+</ul>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="description.html" title="previous page">Description générale</a>
+    <a class='right-next' id="next-link" href="decomposition.html" title="next page">Décomposition spectrale d’un signal physique</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
