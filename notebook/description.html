@@ -243,9 +243,10 @@
 <h1>Description générale<a class="headerlink" href="#description-generale" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="signal-physique">
 <h2>Signal physique<a class="headerlink" href="#signal-physique" title="Permalink to this headline">¶</a></h2>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Signal physique</p>
-<p>Un signal physique est une représentation physique qui transporte une “information” depuis une source vers un destinataire.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Signal physique</strong>
+Un signal physique est une représentation physique qui transporte une “information” depuis une source vers un destinataire.</p>
 </div>
 <div class="dropdown admonition note">
 <p class="admonition-title">Note</p>
@@ -266,18 +267,20 @@ Si les principes et définitions fondamentaux à l’étude de tel ou tel phéno
 </div>
 <div class="section" id="signal-numerique-et-analogique">
 <h2>Signal numérique et analogique<a class="headerlink" href="#signal-numerique-et-analogique" title="Permalink to this headline">¶</a></h2>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Signal analogique</p>
-<p>Un signal analogique est un signal à “temps continu”, c’est-à-dire qu’il peut être représenté par une fonction mathématique à variable réelle (en général le temps):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6afd08bf-971a-4a28-aa57-ae6cd51bd2c0">
-<span class="eqno">(1)<a class="headerlink" href="#equation-6afd08bf-971a-4a28-aa57-ae6cd51bd2c0" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Signal analogique</strong>
+Un signal analogique est un signal à “temps continu”, c’est-à-dire qu’il peut être représenté par une fonction mathématique à variable réelle (en général le temps):</p>
+<div class="amsmath math notranslate nohighlight" id="equation-3c26f1a4-8f15-43e7-be25-5d0312ab47fb">
+<span class="eqno">(1)<a class="headerlink" href="#equation-3c26f1a4-8f15-43e7-be25-5d0312ab47fb" title="Permalink to this equation">¶</a></span>\[\begin{align}
 	s:	\mathbb{R}	&amp;\longrightarrow \mathbb{R}\\
 	    t  &amp;\longrightarrow s(t)
 \end{align}\]</div>
 </div>
-<div class="tip dropdown admonition">
-<p class="admonition-title">Définition : Signal numérique</p>
-<p>Un signal numérique est un signal à “temps discret”, c’est-à-dire qu’il n’est connu que pour des instants successifs. Sa représentation est alors une série de valeur successive (une suite):</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Signal numérique, dropdown</strong>
+Un signal numérique est un signal à “temps discret”, c’est-à-dire qu’il n’est connu que pour des instants successifs. Sa représentation est alors une série de valeur successive (une suite):</p>
 <div class="amsmath math notranslate nohighlight">
 \[\begin{align*}
 	s:	\mathbb{N}	&amp;\longrightarrow \mathbb{R}\\
@@ -288,13 +291,15 @@ Si les principes et définitions fondamentaux à l’étude de tel ou tel phéno
 </div>
 <div class="section" id="signal-periodique">
 <h2>Signal périodique<a class="headerlink" href="#signal-periodique" title="Permalink to this headline">¶</a></h2>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Signal périodique</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Signal périodique</strong></p>
 <p>Un signal analogique est dit périodique s’il existe une grandeur T telle que pour tout instant t on a l’égalité: <span class="math notranslate nohighlight">\(s(t+T)=s(t)\)</span></p>
 <p>La grandeur T est appelée <strong>période</strong> du signal et son inverse f=1/T est la <strong>fréquence</strong> du signal (nombre de fois où le signal réalise les mêmes variations en une seconde).</p>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Valeur moyenne d’un signal périodique</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Valeur moyenne d’un signal périodique</strong></p>
 <p>La valeur moyenne d’un signal périodique est définie par:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -302,8 +307,9 @@ Si les principes et définitions fondamentaux à l’étude de tel ou tel phéno
 \]</div>
 <p>On peut interpréter une telle valeur comme la valeur constante que devrait avoir une fonction constante qui aurait la même aire sous la courbe. D’où le nom de valeur moyenne.</p>
 </div>
-<div class="tip admonition">
-<p class="admonition-title">Définition : Valeur efficace d’un signal périodique</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Définition : Valeur efficace d’un signal périodique</strong></p>
 <p>La valeur efficace d’un signal périodique est définie par:</p>
 <div class="math notranslate nohighlight">
 \[
@@ -311,9 +317,10 @@ S_{eff} = \sqrt{\left\langle S^2 \right\rangle} = \sqrt{\frac{1}{T} \int_{t=0}^{
 \]</div>
 <p>L’interprétation de cette grandeur est plus délicate (considérations énergétiques). Elle sera présentée par la suite.</p>
 </div>
-<div class="important admonition">
-<p class="admonition-title">Fondamental : Propriété de la valeur moyenne (Admis)</p>
-<p>La valeur moyenne est un opérateur linéaire. Ainsi pour deux signaux <span class="math notranslate nohighlight">\(s_1(t)\)</span> et <span class="math notranslate nohighlight">\(s_2(t)\)</span>. La valeur moyenne du signal <span class="math notranslate nohighlight">\(s(t) = \lambda_1 s_1(t) + \lambda_2 s_2(t)\)</span> est :</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental : Propriété de la valeur moyenne (Admis)</strong>
+La valeur moyenne est un opérateur linéaire. Ainsi pour deux signaux <span class="math notranslate nohighlight">\(s_1(t)\)</span> et <span class="math notranslate nohighlight">\(s_2(t)\)</span>. La valeur moyenne du signal <span class="math notranslate nohighlight">\(s(t) = \lambda_1 s_1(t) + \lambda_2 s_2(t)\)</span> est :</p>
 <div class="math notranslate nohighlight">
 \[
 \left\langle s \right\rangle = \lambda_1 \left\langle s_1 \right\rangle + \lambda_2 \left\langle s_2 \right\rangle
