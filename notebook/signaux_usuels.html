@@ -1,0 +1,443 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemples de spectres usuels &#8212; Signaux physiques</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/signaux/notebook/signaux_usuels.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Maitriser les méthodes" href="signaux_ex.html" />
+    <link rel="prev" title="Décomposition spectrale d’un signal physique" href="signaux_decomposition.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Signaux physiques</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signaux.html">
+   Description des signaux physiques
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="signaux_contxt.html">
+   Connaître le contexte
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_description.html">
+     Description générale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_sinusoides.html">
+     Signaux sinusoïdaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_decomposition.html">
+     Décomposition spectrale d’un signal physique
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Exemples de spectres usuels
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="signaux_ex.html">
+   Maitriser les méthodes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_exemples.html">
+     Exemples : Calculs divers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_meth_modulation.html">
+     Méthode : Etudier une modulation en amplitude.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_app.html">
+     Applications
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/signaux_usuels.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/signaux_usuels.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/signaux_usuels.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spectres-des-signaux-electromagnetiques">
+   Spectres des signaux électromagnétiques
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gammes-spectrales">
+     Gammes spectrales
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#types-de-sources-details-en-ligne">
+     Types de sources (détails en ligne)
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#spectres-des-signaux-acoustiques">
+   Spectres des signaux acoustiques
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Gammes spectrales
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#signaux-electriques">
+   Signaux électriques
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="exemples-de-spectres-usuels">
+<h1>Exemples de spectres usuels<a class="headerlink" href="#exemples-de-spectres-usuels" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="spectres-des-signaux-electromagnetiques">
+<h2>Spectres des signaux électromagnétiques<a class="headerlink" href="#spectres-des-signaux-electromagnetiques" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="gammes-spectrales">
+<h3>Gammes spectrales<a class="headerlink" href="#gammes-spectrales" title="Permalink to this headline">¶</a></h3>
+<p>Pour un signal lumineux, la décomposition en série de Fourier de la grandeur associée au signal lumineux va donner les différences fréquences du signal <span class="math notranslate nohighlight">\(\nu\)</span>. La relation: <span class="math notranslate nohighlight">\(\lambda \nu =c\)</span> avec c la célérité de la lumière dans le vide associe donc à chaque fréquence une longueur d’onde dans le vide, donc, pour le visible, une couleur: on obtient le spectre du signal lumineux.</p>
+<p>On peut en général détailler plusieurs types signaux électromagnétiques. Ces types correspondants en réalité à des gammes de fréquences propres à des types d’utilisation ou d’effets observés. On pourra distinguer en augmentant la fréquence (les valeurs limites sont approximatives):</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\nu &lt; 300MHz (1m &lt; \lambda )\)</span>:] Ondes radios. C’est sur ces fréquences que les antennes radios émettent des signaux électromagnétiques modulés par une information (son, image… ). Les ondes radios sont très diverses et on divise en général les gammes de fréquences suivant les utilisations: AM, FM, mobile…  pour la partie grand public.</p></li>
+<li><p><span class="math notranslate nohighlight">\(300MHz &lt;\nu &lt; 300GHz (1mm &lt; \lambda &lt;1m)\)</span>:] Micro-ondes: ondes utilisées pour les radars, les communications par satellite et bien sûr le micro-onde.</p></li>
+<li><p><span class="math notranslate nohighlight">\(300GHz &lt;\nu &lt; 30THz (10 \rm{\mu m} &lt; \lambda &lt;1mm)\)</span>:] Terahertz (ou infrarouge lointain). Domaine relativement peu utilisé mais en pleine essor.</p></li>
+<li><p><span class="math notranslate nohighlight">\(30THz &lt;\nu &lt; 400THz (750nm &lt; \lambda &lt;10 \rm{\mu m})\)</span>:] infrarouge. Très utilisé en spectroscopie car de nombreuses liaisons chimiques absorbent souvent ce rayonnement. Il est aussi le rayonnement électromagnétique émis spontanément par les corps à température ambiante (corps humain par exemple).</p></li>
+<li><p><span class="math notranslate nohighlight">\(400THz &lt;\nu &lt; 770THz (390nm &lt; \lambda &lt; 750nm)\)</span>:] lumière visible.</p></li>
+<li><p><span class="math notranslate nohighlight">\(770THz &lt;\nu &lt; 30PHz (10nm &lt; \lambda &lt; 390nm)\)</span>:] Ultra-violet: partie (faible: <span class="math notranslate nohighlight">\(5\%\)</span>) du spectre émis par le soleil, ils sont en grande partie absorbée par la couche d’ozone, protégeant la Terre (enfin nous!). Les UV sont utilisées pour certaines études ou révélations (circuits imprimés).</p></li>
+<li><p><span class="math notranslate nohighlight">\(30PHz &lt;\nu &lt; 30EHz (10pm &lt; \lambda &lt;10nm)\)</span>:] Rayons X. Rayonnement ionisant principalement utilisé en radiologie ou en cristallographie.</p></li>
+<li><p><span class="math notranslate nohighlight">\(30EHz &lt;\nu (\lambda &lt;10pm)\)</span>:] Rayon gamma. Emis notamment lors de réactions nucléaires, ils sont l’un des principaux dangers lors d’une catastrophe nucléaires car ionisant et difficile à absorber</p></li>
+</ul>
+</div>
+<div class="section" id="types-de-sources-details-en-ligne">
+<h3>Types de sources (détails en ligne)<a class="headerlink" href="#types-de-sources-details-en-ligne" title="Permalink to this headline">¶</a></h3>
+<p>Parmi les différents domaines présentés précédemment, l’un des plus simples à étudier d’un point de vue expérimental est bien évidemment le rayonnement du visible. On rappelle que les différentes longueurs d’onde correspondent à différentes couleurs (du violet au rouge quand on augment la longueur d’onde). Les sources lumineuses sont nombreuses et variées et leur spectre aussi. Trois exemples sont assez caractéristiques et à savoir reconnaître:</p>
+<ul class="simple">
+<li><p>Lampes à incandescence (spectre continu)</p></li>
+<li><p>Lampes spectrales (spectre discret)</p></li>
+<li><p>LASER (quasi-monochromatique)</p></li>
+</ul>
+<div class="topic">
+<p class="topic-title first">Les lampes à incandescence.</p>
+<p>Issues de l’échauffement d’un filament, elles se base sur l’émission d’un corps noir. Un corps à la température T va émettre un spectre continue de longueur d’onde. La loi de Wien prévoit que le maximum d’émission a lieu autour de la longueur d’onde: <span class="math notranslate nohighlight">\(\lambda_{\max} = \frac{2,898 \times 10^{-3}}{T}\)</span>.</p>
+<p>Par exemple la température des ampoules à incandescence classique ou halogène tourne autour de 3000K. La longueur d’onde associée est <span class="math notranslate nohighlight">\(\lambda \approx 960nm\)</span>: le maximum d’émission est donc dans l’infrarouge.</p>
+<div class="figure align-center" id="corps-noir">
+<a class="reference internal image-reference" href="../_images/Signaux_SpectreCorpsNoir.jpg"><img alt="../_images/Signaux_SpectreCorpsNoir.jpg" src="../_images/Signaux_SpectreCorpsNoir.jpg" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Spectre d’un corps noir</span><a class="headerlink" href="#corps-noir" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Les lampes spectrales.</p>
+<p>Constituée d’un gaz d’atomes particuliers, elle utilise les transitions énergétiques des électrons de ces atomes dont certaines correspondent à des longueurs du visible. Les niveaux d’énergie (mécanique quantique) étant discrets, les longueurs d’onde émise sont discrètes. On parle de spectre discret.</p>
+<div class="figure align-center" id="discret">
+<img alt="../_images/Signaux_raies_balmer.jpg" src="../_images/Signaux_raies_balmer.jpg" />
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Spectre discret</span><a class="headerlink" href="#discret" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Les LASERs</p>
+<p>(Light Amplification by Stimulated Emission of Radiation) Source lumineuse basée sur l’émission stimulée d’une transition énergétique particulière au moyen d’un amplification dans une cavité résonante. Les Lasers ont de nombreuses propriétés dont celle, pour la plupart d’être monochromatique c’est-à-dire qu’il n’émettent qu’une seule longueur d’onde (en réalité une raie fine).</p>
+</div>
+<div class="remove-output topic">
+<p class="topic-title first">Spectres dans le visible de différentes sources lumineuses.</p>
+<p><em>Attention, certaines sources émettent aussi dans les autres gammes de longueur d’onde.</em></p>
+<div class="figure align-center" id="spectres-lum">
+<img alt="../_images/Signaux_spectres_lumiere.jpg" src="../_images/Signaux_spectres_lumiere.jpg" />
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Différentes spectres</span><a class="headerlink" href="#spectres-lum" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="spectres-des-signaux-acoustiques">
+<h2>Spectres des signaux acoustiques<a class="headerlink" href="#spectres-des-signaux-acoustiques" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="id1">
+<h3>Gammes spectrales<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>Pour un signal sonore, la décomposition en série de Fourier permet de déterminer <strong>la hauteur et le timbre du son.</strong> Si l’on superpose deux notes différentes, on retrouvera en terme de composante spectrale la hauteur des deux notes séparées, ce qui n’est pas le cas dans le signal temporel.</p>
+<ul class="simple">
+<li><p>En moyenne, les sons “audibles” par l’oreille humaine possèdent des fréquences comprises entre 20Hz et 20kHz.</p></li>
+<li><p>En dessous de 20Hz, on parle d’infrasons. En dessus on parle d’ultrasons. Si les infrasons sont peu utilisés, les ultrasons sont très utilisés (télémétrie…)</p></li>
+</ul>
+<div class="topic">
+<p class="topic-title first">Exemple d’un Sol d’une flûte</p>
+<p>On remarquera sur les tracés que pour un signal complexe, il est délicat de déterminer les composantes spectrales sur le tracé temporel. Par contre, on se rapproche d’un spectre discret constituée de fréquences proportionnelles au fondamentales : un signal périodique.</p>
+<div class="figure align-center" id="soltempo">
+<img alt="../_images/Signaux_SolTempo.png" src="../_images/Signaux_SolTempo.png" />
+<p class="caption"><span class="caption-number">Fig. 9 </span><span class="caption-text">Son d’une flûte</span><a class="headerlink" href="#soltempo" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-center" id="sol-freq">
+<a class="reference internal image-reference" href="../_images/Signaux_Sol_Flute.png"><img alt="../_images/Signaux_Sol_Flute.png" src="../_images/Signaux_Sol_Flute.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 10 </span><span class="caption-text">Spectre du signal sonore</span><a class="headerlink" href="#sol-freq" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="signaux-electriques">
+<h2>Signaux électriques<a class="headerlink" href="#signaux-electriques" title="Permalink to this headline">¶</a></h2>
+<p>Les signaux électriques peuvent aussi être décomposés. En général, les signaux électrique (qu’on décompose) servent au transport d’information et le spectre du signal est lié à l’information transportée. Comme on le verra, la décomposition spectrale sert à isoler les fréquences qu’on veut garder des fréquences qu’on veut supprimer (bruit…): on parle de <strong>filtrage.</strong></p>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="signaux_decomposition.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Décomposition spectrale d’un signal physique</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="signaux_ex.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Maitriser les méthodes</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

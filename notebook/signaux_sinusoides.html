@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signaux sinusoïdaux &#8212; Signaux physiques</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/signaux/notebook/signaux_sinusoides.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Décomposition spectrale d’un signal physique" href="signaux_decomposition.html" />
+    <link rel="prev" title="Description générale" href="signaux_description.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Signaux physiques</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signaux.html">
+   Description des signaux physiques
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="signaux_contxt.html">
+   Connaître le contexte
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_description.html">
+     Description générale
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Signaux sinusoïdaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_decomposition.html">
+     Décomposition spectrale d’un signal physique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_usuels.html">
+     Exemples de spectres usuels
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="signaux_ex.html">
+   Maitriser les méthodes
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_exemples.html">
+     Exemples : Calculs divers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_meth_modulation.html">
+     Méthode : Etudier une modulation en amplitude.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_app.html">
+     Applications
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/signaux_sinusoides.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/signaux_sinusoides.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/signaux_sinusoides.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#definition">
+   Définition
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#representation-de-fresnel">
+   Représentation de Fresnel
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#propriete-valeurs-moyennes-et-efficaces-des-sinusoides">
+   Propriété : Valeurs moyennes et efficaces des sinusoïdes
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#dephasage-en-signaux-sinusoidaux">
+   Déphasage en signaux sinusoïdaux
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="signaux-sinusoidaux">
+<h1>Signaux sinusoïdaux<a class="headerlink" href="#signaux-sinusoidaux" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="definition">
+<h2>Définition<a class="headerlink" href="#definition" title="Permalink to this headline">¶</a></h2>
+<div class="full-width admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Forme mathématique d’un signal sinusoïdal</strong></p>
+<p>Un signal analogique est dit sinusoïdal, si la fonction décrivant la grandeur associée est de la forme :</p>
+<div class="amsmath math notranslate nohighlight" id="equation-b9019350-9883-42d9-8282-c0d6d0241411">
+<span class="eqno">(2)<a class="headerlink" href="#equation-b9019350-9883-42d9-8282-c0d6d0241411" title="Permalink to this equation">¶</a></span>\[\begin{equation}
+s(t) = S_m \cos \left ( \omega t +\phi_0 \right )
+\end{equation}\]</div>
+<p>L’expression mathématique précédente fait apparaître des caractéristiques d’un sinusoïde :</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(S_m\)</span> est appelée <strong>amplitude</strong> du signal.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\omega t +\phi\)</span> est appellée <strong>phase du signal</strong>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\omega\)</span> est la <strong>pulsation du signal</strong>, elle est reliée à la période et la fréquence du signal <span class="math notranslate nohighlight">\(T=\frac{2 \pi}{\omega}=\frac{1}{f}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\phi\)</span> est appelée <strong>phase à l’origine</strong>. Il correspond à la phase du signal à <span class="math notranslate nohighlight">\(t=0\)</span> (ou à l’écart de phase, déphasage, (en radians) avec une fonction sinusoïdal qui serait ici maximale en <span class="math notranslate nohighlight">\(t=0\)</span>).</p></li>
+</ul>
+<div class="figure align-center" id="sinusoide">
+<a class="reference internal image-reference" href="../_images/sinusoide_vm_0.png"><img alt="../_images/sinusoide_vm_0.png" src="../_images/sinusoide_vm_0.png" style="width: 70%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Sinusoïde</span><a class="headerlink" href="#sinusoide" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p><strong>L’amplitude n’est PAS l’écart à l’axe des abscisses dans le cas général.</strong> Si l’on considère le cas où l’on a ajouté une valeur moyenne, ce n’est pas vrai.</p>
+<div class="figure align-center" id="sinusoide-l">
+<a class="reference internal image-reference" href="../_images/sinusoide_vm_1.png"><img alt="../_images/sinusoide_vm_1.png" src="../_images/sinusoide_vm_1.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Sinusoïde avec valeur moyenne</span><a class="headerlink" href="#sinusoide-l" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="representation-de-fresnel">
+<h2>Représentation de Fresnel<a class="headerlink" href="#representation-de-fresnel" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Représentation de Fresnel d’un signal sinusoïdal</strong></p>
+<p>La représentation de Fresnel de la grandeur sinusoïdale s(t) à l’instant t est la représentation dans un plan d’un vecteur <span class="math notranslate nohighlight">\(\overrightarrow{S}\)</span> tel que :</p>
+<ul class="simple">
+<li><p>la norme est l’amplitude de s(t) <span class="math notranslate nohighlight">\(S_m\)</span></p></li>
+<li><p>le vecteur fait avec l’axe des abscisses un angle <span class="math notranslate nohighlight">\(\phi = \omega t + \phi_0\)</span> soit la phase du signal.</p></li>
+</ul>
+<div class="figure align-center" id="fresnel-fixe">
+<a class="reference internal image-reference" href="../_images/fresnel_fixe.png"><img alt="../_images/fresnel_fixe.png" src="../_images/fresnel_fixe.png" style="width: 30%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Représentation de Fresnel</span><a class="headerlink" href="#fresnel-fixe" title="Permalink to this image">¶</a></p>
+</div>
+<p>Très souvent, on travaillera avec la représentation de Fresnel à l’instant <span class="math notranslate nohighlight">\(t=0\)</span>.</p>
+</div>
+</div>
+<div class="section" id="propriete-valeurs-moyennes-et-efficaces-des-sinusoides">
+<h2>Propriété : Valeurs moyennes et efficaces des sinusoïdes<a class="headerlink" href="#propriete-valeurs-moyennes-et-efficaces-des-sinusoides" title="Permalink to this headline">¶</a></h2>
+<div class="full-width admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Fondamental</strong></p>
+<p>La valeur moyenne d’un signal sinusoïdal de la forme <span class="math notranslate nohighlight">\(s(t) = S_m \cos{(\omega t + \phi)}\)</span> est <strong>nulle</strong>.</p>
+<p>Si l’on ajoute au signal une valeur constante <span class="math notranslate nohighlight">\(S_0\)</span>, alors <strong>la valeur moyenne est <span class="math notranslate nohighlight">\(S_0\)</span></strong>, d’où le nom de valeur moyenne.</p>
+<p>La valeur efficace d’un signal sinusoïdal de la forme <span class="math notranslate nohighlight">\(s(t) = S_m \cos{(\omega t + \phi)}\)</span> est :</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{S_m}{\sqrt{2}}
+\]</div>
+</div>
+<div class="admonition-demonstration admonition">
+<p class="admonition-title">Démonstration</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Pour la valeur moyenne :</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+\left\langle s \right\rangle &amp;= \frac{1}{T} \int_{t=0}^{t=T} S_m \cos{(\omega t + \phi)} dt\\
+&amp;= \frac{S_m}{T} \left[ \frac{1}{\omega} \sin{(\omega t + \phi)}\right]_{0}^{T}\\
+&amp;= 0
+\end{align*}\]</div>
+<p>La valeur moyenne d’une constante <span class="math notranslate nohighlight">\(S_0\)</span> est cette constante. Comme la valeur moyenne est un opérateur linéaire, la valeur moyenne de la fonction <span class="math notranslate nohighlight">\(s(t) = S_m \cos{(\omega t + \phi)} + S_0\)</span> est donc bien <span class="math notranslate nohighlight">\(S_0\)</span>.</p>
+<ul class="simple">
+<li><p>Pour la valeur efficace :</p></li>
+</ul>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*}
+S_{eff} &amp; = \sqrt{\frac{2}{T} \int_{t=0}^{t=T/2} S_m^2 \cos^2{(\omega t + \phi)} dt}\\
+&amp; =  \sqrt{\frac{2S_m^2 }{T} \int_{t=0}^{t=T/2} \frac{1}{2} \left ( \cos{2(\omega t + \phi)} + 1 \right) dt }\\
+&amp; = \sqrt{\frac{S^2_m}{T} {\left[ \frac{1}{2\omega} \sin{2(\omega t + \phi)}+ t\right]}_{0}^{T/2}}\\
+&amp; = \sqrt{\frac{S^2_m}{T} 2T} = \frac{S_m}{\sqrt{2}}
+\end{align*}\]</div>
+</div></blockquote>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Valeur efficace d’une somme de deux sinusoïdes</strong></p>
+<p>Si l’on somme deux sinusoïdes de <strong>fréquences différentes</strong> et d’amplitude respectives <span class="math notranslate nohighlight">\(S_{1,eff}\)</span> et <span class="math notranslate nohighlight">\(S_{2,eff}\)</span> alors la valeur efficace de la somme sera :</p>
+<div class="math notranslate nohighlight">
+\[
+S_{eff} = \sqrt{S_{1,eff}^2 + S_{2,eff}^2}
+\]</div>
+</div>
+<div class="admonition-demonstration admonition">
+<p class="admonition-title"><strong>Démonstration</strong></p>
+<blockquote>
+<div><div class="amsmath math notranslate nohighlight" id="equation-491613d9-4a3e-4844-9002-7ce175cc1b29">
+<span class="eqno">(3)<a class="headerlink" href="#equation-491613d9-4a3e-4844-9002-7ce175cc1b29" title="Permalink to this equation">¶</a></span>\[\begin{align}
+S_{eff} &amp;= \sqrt{\left\langle {(S_1(t) + S_2(t))}^2\right\rangle}\\
+			&amp;= \sqrt{\left\langle {S_1(t)}^2 + {S_2(t)}^2 + 2 S_1(t) S_2(t)\right\rangle}\\
+			&amp;= \sqrt{\left\langle{S_1(t)}^2\right\rangle + \left\langle{S_2(t)}^2\right\rangle + \left\langle2 S_1(t) S_2(t)\right\rangle}\\
+			&amp;= \sqrt{S_{1,eff}^2 + S_{2,eff}^2 + 2 S_1m S_2m \left\langle \cos{(\omega_1 t + \varphi_1)} \cos{(\omega_2 t + \varphi_2)} \right\rangle}\\
+			&amp;= \sqrt{S_{1,eff}^2 + S_{2,eff}^2 + S_1m S_2m \left\langle \cos{((\omega_1 + \omega_2) t + \varphi_1+\varphi_2)} \right\rangle + S_1m S_2m \left\langle  \cos{((\omega_1 - \omega_2) t + \varphi_1 - \varphi_2)} \right\rangle} \\
+			&amp;= \sqrt{S_{1,eff}^2 + S_{2,eff}^2 + 0 + 0}
+\end{align}\]</div>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="dephasage-en-signaux-sinusoidaux">
+<h2>Déphasage en signaux sinusoïdaux<a class="headerlink" href="#dephasage-en-signaux-sinusoidaux" title="Permalink to this headline">¶</a></h2>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Déphasage</strong></p>
+<p>On considère deux signaux sinusoïdaux dont les phases sont <span class="math notranslate nohighlight">\(\varphi_1(t)\)</span> et <span class="math notranslate nohighlight">\(\varphi_2(t)\)</span>. Le déphasage <span class="math notranslate nohighlight">\(\Delta \varphi_{2/1}\)</span> du signal 2 sur le signal 1 est défini par</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta  \varphi_{2/1} = \varphi_2(t) - \varphi_1(t)
+\]</div>
+<p><em>Si les deux signaux sont de même fréquence/pulsation/période, alors le déphasage entre les deux est constant. Sinon, il varie.</em></p>
+</div>
+<div class="note admonition">
+<p class="admonition-title">Cas particuliers</p>
+<ul class="simple">
+<li><p>Si le déphasage entre deux signaux est nul, on dit que les signaux sont <strong>en phase</strong>.</p></li>
+<li><p>Si le déphasage entre deux signaux est égal à <span class="math notranslate nohighlight">\(\pi\)</span>, on dit que les signaux sont <strong>en opposition de phase</strong>: le maximum de l’un coïncide avec le minimum de l’autre et réciproquement.</p></li>
+<li><p>Si le déphasage entre deux signaux est égal à <span class="math notranslate nohighlight">\(\pm \pi/2\)</span>, on dit que les signaux sont <strong>en quadrature de phase</strong>: le maximum/minimum de l’un coïncide avec le 0 (ou le passage par la valeur moyenne) de l’autre et réciproquement.</p></li>
+</ul>
+</div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Dans le système d’unités S.I., l’unité d’angle est le <strong>radian</strong>.</p>
+</div>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Relation entre déphasage et retard temporel</strong>
+Soit deux signaux sinusoïdaux <em>de même pulsation <span class="math notranslate nohighlight">\(\omega\)</span></em>, d’amplitude respectives <span class="math notranslate nohighlight">\(S_1\)</span> et <span class="math notranslate nohighlight">\(S_2\)</span> et de phase à l’origine respectives <span class="math notranslate nohighlight">\(\phi_1\)</span> et <span class="math notranslate nohighlight">\(\phi_2\)</span>. Le retard temporel <span class="math notranslate nohighlight">\(\Delta t\)</span> du signal 2 sur le signal 1, représentant l’écart temporel relatif entre deux points des signaux ayant la valeur est relié au déphasage par:</p>
+<div class="math notranslate nohighlight">
+\[
+\Delta \phi = - \omega  \Delta t
+\]</div>
+</div>
+<div class="admonition-demonstration admonition">
+<p class="admonition-title"><strong>Démonstration</strong></p>
+<blockquote>
+<div><p>On cherche <span class="math notranslate nohighlight">\(\Delta t\)</span> tel que : <span class="math notranslate nohighlight">\(S_1 \cos (\omega t + \phi_1) = S_2 \cos (\omega (t + \Delta t) + \phi_2)\)</span> soit <span class="math notranslate nohighlight">\(\omega t + \phi_1 = \omega (t + \Delta t) + \phi_2\)</span> donc : <span class="math notranslate nohighlight">\(\omega \Delta t = \phi_1 - \phi_2 = - \Delta \phi_{2/1}\)</span></p>
+</div></blockquote>
+</div>
+<div class="topic">
+<p class="topic-title first">Intérêt des signaux sinusoïdaux</p>
+<p>Les signaux sinusoïdaux sont extrêmement importants en physique. En effet, on les retrouve dans deux cas très répandus:</p>
+<ul class="simple">
+<li><p>Les oscillateurs harmoniques. A l’exemple des systèmes masse-ressort, ces systèmes ont une évolution sinusoïdal. Or nous verrons dans le cours de l’année que les oscillateurs harmoniques se retrouvent partout en physique.</p></li>
+<li><p>Tout signal physique peut être vu comme une somme de sinusoïdes d’amplitude, de fréquence et de phase à l’origine bien définie. C’est le principe de la décomposition spectrale qui va être présentée ensuite.</p></li>
+</ul>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="signaux_description.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Description générale</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="signaux_decomposition.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Décomposition spectrale d’un signal physique</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,570 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemples : Calculs divers &#8212; Signaux physiques</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://pcsi3physiquestan.github.io/signaux/notebook/signaux_exemples.html" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Méthode : Etudier une modulation en amplitude." href="signaux_meth_modulation.html" />
+    <link rel="prev" title="Maitriser les méthodes" href="signaux_ex.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Signaux physiques</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../signaux.html">
+   Description des signaux physiques
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="signaux_contxt.html">
+   Connaître le contexte
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_description.html">
+     Description générale
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_sinusoides.html">
+     Signaux sinusoïdaux
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_decomposition.html">
+     Décomposition spectrale d’un signal physique
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_usuels.html">
+     Exemples de spectres usuels
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="signaux_ex.html">
+   Maitriser les méthodes
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Exemples : Calculs divers
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_meth_modulation.html">
+     Méthode : Etudier une modulation en amplitude.
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="signaux_app.html">
+     Applications
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/notebook/signaux_exemples.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/notebook/signaux_exemples.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/notebook/signaux_exemples.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#valeur-efficace-et-valeur-moyenne">
+   Valeur efficace et valeur moyenne
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#etudier-les-caracteristiques-d-un-sinusoide">
+   Etudier les caractéristiques d’un sinusoïde
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#calculer-un-dephasage">
+   Calculer un déphasage
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tracer-le-spectre-d-un-signal-periodique">
+   Tracer le spectre d’un signal périodique
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="exemples-calculs-divers">
+<h1>Exemples : Calculs divers<a class="headerlink" href="#exemples-calculs-divers" title="Permalink to this headline">¶</a></h1>
+<p><em>Les corrections sont en ligne.</em></p>
+<div class="section" id="valeur-efficace-et-valeur-moyenne">
+<h2>Valeur efficace et valeur moyenne<a class="headerlink" href="#valeur-efficace-et-valeur-moyenne" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-exercice-correction-en-ligne admonition">
+<p class="admonition-title">Exercice (correction en ligne)</p>
+<ol class="simple">
+<li><p>Calculer la valeur moyenne puis efficace du signal “créneau” de période T, s(t) défini par:</p></li>
+</ol>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+s(t) = \begin{cases} A \textrm{ si }x \in [0;T/2]\\ -A  \textrm{ si }x \in [T/2;T]\end{cases}
+\end{split}\]</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Correction</p>
+<blockquote>
+<div><p>Valeur moyenne : On utilise la définition de la valeur moyenne et l’on sépare l’intégrale en deux parties :</p>
+<div class="math notranslate nohighlight">
+\[
+\left\langle s \right\rangle = \frac{1}{T} \left (\int_{t=0}^{t=T/2} A dt + \int_{t=T/2}^{t=T} - A dt \right ) = \frac{1}{T}(\frac{AT}{2} - \frac{AT}{2}) = 0
+\]</div>
+<p>Valeur efficace : On utilise la définition de la valeur efficace et l’on sépare l’intégrale en deux parties :</p>
+<div class="math notranslate nohighlight">
+\[
+S_{eff} = \sqrt{\int_{t=0}^{t=T/2} A^2 dt + \int_{t=T/2}^{t=T} {(- A)}^2 dt} = \sqrt{\frac{1}{T}(\frac{A^2T}{2} + \frac{A^2T}{2})} = A
+\]</div>
+</div></blockquote>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Exercice (correction en ligne)</p>
+<p>Calculer la valeur moyenne puis efficace du signal “triangle” de période T, s(t) défini par:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+s(t) = \begin{cases} a (t - \frac{T}{4})  \textrm{ si }x \in [0;T/2]\\ -a (t - \frac{3T}{4})  \textrm{ si }x \in [T/2;T]\end{cases}
+\end{split}\]</div>
+</div>
+<div class="topic">
+<p class="topic-title first">Correction</p>
+<blockquote>
+<div><p>Valeur moyenne : On utilise la définition de la valeur moyenne et l’on sépare l’intégrale en deux parties :</p>
+<div class="math notranslate nohighlight">
+\[
+\left\langle s \right\rangle = \frac{1}{T}\left (\int_{t=0}^{t=T/2} a (t-T/4) dt + \int_{t=T/2}^{t=T} - a (t - 3T/4) dt \right ) = \frac{a}{T}(0 + 0) = 0
+\]</div>
+<p>Valeur efficace : On utilise la définition de la valeur efficace et l’on sépare l’intégrale en deux parties :</p>
+<div class="math notranslate nohighlight">
+\[
+S_{eff} = \sqrt{\int_{t=0}^{t=T/2} a^2 {(t - T/4)}^2 dt + \int_{t=T/2}^{t=T} a^2 {(t - 3T/4)}^2 dt} = \sqrt{\frac{a^2}{T}(\frac{T^3}{96} + \frac{T^3}{96})} = \frac{aT}{4 \sqrt{3}}
+\]</div>
+</div></blockquote>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>On remarquera que <span class="math notranslate nohighlight">\(S_{eff} \ne \sqrt{\left\langle s \right\rangle^2}\)</span></p>
+</div>
+</div>
+<div class="section" id="etudier-les-caracteristiques-d-un-sinusoide">
+<h2>Etudier les caractéristiques d’un sinusoïde<a class="headerlink" href="#etudier-les-caracteristiques-d-un-sinusoide" title="Permalink to this headline">¶</a></h2>
+<p>L’objectif est</p>
+<ul class="simple">
+<li><p>d’apprendre à écrire correctement l’expression mathématique d’un sinusoïde connaissant ou en mesurant ses caractéristiques.</p></li>
+<li><p>de faire l’inverse : obtenir les caractéristiques d’un sinusoïde et tracer son graphique à partir de son expression mathématique.</p></li>
+</ul>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Donner l’expression mathématique s(t):</p>
+<ol class="simple">
+<li><p>d’un sinusoïde de pulsation <span class="math notranslate nohighlight">\(4\omega\)</span>, d’amplitude 2a et de phase à l’origine <span class="math notranslate nohighlight">\(-\pi/5\)</span>.</p></li>
+<li><p>d’un sinusoïde de période <span class="math notranslate nohighlight">\(2T/3\)</span>, d’amplitude 4a (si rien n’est précisé, on considère que la phase à l’origine est nulle).</p></li>
+<li><p>d’un sinusoïde de fréquence 3f, d’amplitude 2a, de valeur moyenne - <span class="math notranslate nohighlight">\(S_1\)</span> et de phase à l’origine <span class="math notranslate nohighlight">\(\pi/3\)</span>.</p></li>
+</ol>
+</div>
+<div class="topic">
+<p class="topic-title first">Correction</p>
+<blockquote>
+<div><ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(s(t) = 2a \cos {(4 \omega t - \frac{\pi}{5})}\)</span></p></li>
+<li><p>La pulsation vaut alors <span class="math notranslate nohighlight">\(\omega = \frac{6\pi}{2T}\)</span> donc <span class="math notranslate nohighlight">\(s(t) = 4a \cos {(\frac{3\pi}{T} t )}\)</span></p></li>
+<li><p>La pulsation vaut alors <span class="math notranslate nohighlight">\(\omega = 2\pi \times 3f\)</span> donc <span class="math notranslate nohighlight">\(s(t) = 2a \cos {(6\pi f t + \frac{\pi}{3})} - S_1\)</span></p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="dropdown admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Il faut faire attention à bien différencier le sens physique d’une grandeur et les notations utilisées. Ainsi, même si dans cet exercice on utilise les notations T et f, elles <strong>ne correspondent pas</strong> aux périodes et fréquences des signaux. Le sens physique s’obtient par analyse des équations mathématiques, pas par analyse du nom de la grandeur.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Réaliser la représentation graphique de s(t) pour les expressions précédentes. On prendra a=1, T=1, <span class="math notranslate nohighlight">\(\omega = \pi\)</span>, f=1, <span class="math notranslate nohighlight">\(S_1=2\)</span></p>
+</div>
+<div class="topic">
+<p class="topic-title first">Correction</p>
+<div class="figure align-center" id="sinus-trace">
+<img alt="../_images/sinusoide_trace.png" src="../_images/sinusoide_trace.png" />
+</div>
+</div>
+<div class="dropdown admonition important">
+<p class="admonition-title">Important</p>
+<p><strong>Lien retard temporel et phase</strong></p>
+<p>La valeur moyenne déterminer l’axe de symétrie du sinusoïde et l’amplitude l’écart à cet axe de symétrie (les valeurs extrêmes).</p>
+<p>On a utilisé la relation <span class="math notranslate nohighlight">\(\phi_0 = - \omega t_1\)</span> pour calculer le retard temporel où <span class="math notranslate nohighlight">\(t_1\)</span> est le temps où la fonction cosinus sera maximale (puisque la phase est alors nulle).</p>
+<p>On a ensuite représenté des points particuliers pour faciliter le tracé (points extrêmes, passage par la valeur moyenne) en utilisant la valeur de la période de chaque signal à partir de <span class="math notranslate nohighlight">\(t_1\)</span>.</p>
+</div>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Donner les caractéristiques (période, fréquence, pulsation, amplitude, valeur moyenne, phase à l’origine) des signaux suivants :</p>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(s(t) = \frac{1}{2k + 1} \sin{(2k+1) \omega t}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(s(t) = 7\omega \cos(2f t + 3)\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(s(t) = 3a \cos(\frac{2\pi n}{T}t) + 4c\)</span></p></li>
+</ol>
+</div>
+<div class="topic">
+<p class="topic-title first">Correction</p>
+<blockquote>
+<div><p>La lecture des caractéristiques ne se fait pas par rapport au nom des grandeurs mais à leur position dans la structure mathématique. Ainsi :</p>
+<ul class="simple">
+<li><p>L’amplitude est le facteur multiplicatif du sinusoïde <span class="math notranslate nohighlight">\(\boxed{A}\sin \omega t + \phi\)</span>.</p></li>
+<li><p>La pulsation est le facteur multiplicatif devant le temps <span class="math notranslate nohighlight">\(A\sin \boxed{\omega} t + \phi\)</span>.</p></li>
+</ul>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(s(t) = \boxed{\frac{1}{2k + 1}} \sin{\boxed{(2k+1) \omega} t} \)</span> donc</p></li>
+</ol>
+<ul class="simple">
+<li><p>Amplitude : <span class="math notranslate nohighlight">\(\frac{1}{2k + 1}\)</span></p></li>
+<li><p>Pulsation<span class="math notranslate nohighlight">\((2k + 1) \omega\)</span></p></li>
+<li><p>Période : <span class="math notranslate nohighlight">\(\frac{2\pi}{(2k+1)\omega}\)</span></p></li>
+<li><p>Fréquence : <span class="math notranslate nohighlight">\(\frac{(2k+1) \omega}{2 \pi}\)</span></p></li>
+<li><p>Valeur moyenne nulle</p></li>
+<li><p>Phase à l’origine nulle</p></li>
+</ul>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(s(t) = \boxed{7\omega} \cos(\boxed{2f} t + 3)\)</span></p></li>
+</ol>
+<ul class="simple">
+<li><p>Amplitude : <span class="math notranslate nohighlight">\(7 \omega\)</span></p></li>
+<li><p>Pulsation<span class="math notranslate nohighlight">\(2f\)</span></p></li>
+<li><p>Période : <span class="math notranslate nohighlight">\(\frac{2\pi}{2f}\)</span></p></li>
+<li><p>Fréquence : <span class="math notranslate nohighlight">\(\frac{f}{\pi}\)</span></p></li>
+<li><p>Valeur moyenne nulle</p></li>
+<li><p>Phase à l’origine : 3</p></li>
+</ul>
+<ol class="simple">
+<li><p><span class="math notranslate nohighlight">\(s(t) = \boxed{3a} \cos(\boxed{\frac{2\pi n}{T}}t) + 4c\)</span></p></li>
+</ol>
+<ul class="simple">
+<li><p>Amplitude : <span class="math notranslate nohighlight">\(3a\)</span></p></li>
+<li><p>Pulsation<span class="math notranslate nohighlight">\(\frac{2 \pi n}{T}\)</span></p></li>
+<li><p>Période : <span class="math notranslate nohighlight">\(T/n\)</span></p></li>
+<li><p>Fréquence : <span class="math notranslate nohighlight">\(\frac{n}{T}\)</span></p></li>
+<li><p>Valeur moyenne 4c</p></li>
+<li><p>Phase à l’origine : nulle</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="calculer-un-dephasage">
+<h2>Calculer un déphasage<a class="headerlink" href="#calculer-un-dephasage" title="Permalink to this headline">¶</a></h2>
+<p>Le but de cet exercice est de comprendre la notion de déphasage et les méthodes d’études associées.</p>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>Déterminer expérimentalement le déphasage du signal vert sur le signal rouge.</p>
+<div class="figure align-center" id="dephasage">
+<a class="reference internal image-reference" href="../_images/dephasage.png"><img alt="../_images/dephasage.png" src="../_images/dephasage.png" style="width: 75%;" /></a>
+</div>
+</div>
+<div class="dropdown admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Attention, <strong>on ne peut mesurer directement un déphasage (en radian) sur un graphique temporel. On mesure un retard temporel.</strong></p>
+</div>
+<div class="topic">
+<p class="topic-title first">Correction</p>
+<blockquote>
+<div><p>Commençons par mesurer le <strong>retard temporel</strong> du signal vert sur le signal rouge. C’est une grandeur algébrique, il faut donc tenir compte de l’ordre des deux signaux. Ici, <strong>le signal vert est en avance, donc le retard est négatif.</strong></p>
+<p>Ce retard se mesure entre deux points ayant la même valeur en ordonnée. Il est conseillé de mesurer le retard entre deux points où la fonction s’annule (ou atteint sa valeur moyenne) pour des questions de précision. On mesure ici <span class="math notranslate nohighlight">\(\Delta t = - 1.8 s\)</span>.</p>
+<p>On doit ensuite utiliser la relation prouvée précédemment <span class="math notranslate nohighlight">\(\Delta \phi = - \omega \Delta t\)</span>. La pulsation s’obtient en mesurant la période. Ici T = 6s donc <span class="math notranslate nohighlight">\(\omega = \pi / 3= 1 \rm{rad.s^{-1}}\)</span>.</p>
+<p>Il vient <span class="math notranslate nohighlight">\(\Delta \phi = 1.8 \rm{rad}\)</span></p>
+</div></blockquote>
+<div class="figure align-center" id="dephasage-c">
+<a class="reference internal image-reference" href="../_images/dephasage_c.png"><img alt="../_images/dephasage_c.png" src="../_images/dephasage_c.png" style="width: 50%;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="tracer-le-spectre-d-un-signal-periodique">
+<h2>Tracer le spectre d’un signal périodique<a class="headerlink" href="#tracer-le-spectre-d-un-signal-periodique" title="Permalink to this headline">¶</a></h2>
+<div class="attention admonition">
+<p class="admonition-title">Exercice</p>
+<p>On reprend le signal triangle :</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+s(t) = \begin{cases} a (t - \frac{T}{4})  \textrm{ si }x \in [0;T/2]\\ -a (t - \frac{3T}{4})  \textrm{ si }x \in [T/2;T]\end{cases}
+\end{split}\]</div>
+<p>dont la décomposition en série de Fourier est :</p>
+<div class="math notranslate nohighlight">
+\[
+s(t) = \frac{8 a T}{\pi^2} \sum\limits_{n=0}^{+ \infty} \frac{1}{(2n + 1)^2} \sin{[(2n+1) \frac{2 \pi}{T}t]}
+\]</div>
+<ol class="simple">
+<li><p>Justifier que ce signal est périodique de période T.</p></li>
+<li><p>Représenter le spectre du signal.</p></li>
+</ol>
+</div>
+<div class="topic">
+<p class="topic-title first">Correction</p>
+<ol class="simple">
+<li><p><strong>Période du signal</strong> : Dans une décomposition en série de Fourier, la période du signal correspond à la période du fondamental, donc de la composante de plus basse fréquence. Ici, c’est pour n=0, soit une pulsation (on ne peut lire directement qu’une pulsation) <span class="math notranslate nohighlight">\(\frac{2\pi}{T}\)</span> donc une période T</p></li>
+<li><p><strong>Tracé du spectre</strong> : La méthode pour tracé un spectre connaissant la décomposition spectrale est :</p></li>
+<li><p><em>Déterminer les pulsations puis les fréquences qui composent le spectre.</em> On a ici une série. La pulsation de chaque terme se lit dans le sinus <span class="math notranslate nohighlight">\(\sin[\boxed{(2 n +1) \frac{2\pi}{T}} t]\)</span>. Les pulsations du signal sont donc les pulsations <span class="math notranslate nohighlight">\((2 n +1) \frac{2\pi}{T}\)</span> donc les fréquences <span class="math notranslate nohighlight">\(f_n = \frac{2n+1}{T}\)</span>. On peut alors placer les fréquences sur un graphique.</p></li>
+</ol>
+<div class="figure align-center" id="triangle-freq">
+<a class="reference internal image-reference" href="../_images/spectre_triangle_freq.png"><img alt="../_images/spectre_triangle_freq.png" src="../_images/spectre_triangle_freq.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 11 </span><span class="caption-text">Fréquences du signal</span><a class="headerlink" href="#triangle-freq" title="Permalink to this image">¶</a></p>
+</div>
+<ol class="simple">
+<li><p><em>Déterminer les amplitudes associées à des fréquences.</em> Si les fréquences sont isolées, on lit l’amplitude comme le facteur devant le sinus/cosinus. Dans le cas d’une somme, on va déterminer la fonction qui associe le n-ième rang (puis la fréquence) à l’amplitude. Ici l’amplitude de chaque sinusoïde a pour expression <span class="math notranslate nohighlight">\(c(n) = \frac{8aT}{\pi^2(2n+1)^2}\)</span>. L’étude précédente (<span class="math notranslate nohighlight">\(2n+1 = f_n T\)</span>) permet d’exprimer <span class="math notranslate nohighlight">\(c_n\)</span> en fonction de <span class="math notranslate nohighlight">\(f_n\)</span>:</p></li>
+</ol>
+<p><span class="math notranslate nohighlight">\(c(f_n) = \frac{8aT}{\pi^2 T^2 f_n^2}\)</span></p>
+<p>On trace alors la fonction <span class="math notranslate nohighlight">\(c(f)\)</span> et on trace des traits représentant les amplitudes pour les composantes spectrales réellement présentes.</p>
+<div class="figure align-center" id="triangle-freq-2">
+<a class="reference internal image-reference" href="../_images/spectre_triangle.png"><img alt="../_images/spectre_triangle.png" src="../_images/spectre_triangle.png" style="width: 50%;" /></a>
+<p class="caption"><span class="caption-number">Fig. 12 </span><span class="caption-text">Fréquences du signal</span><a class="headerlink" href="#triangle-freq-2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./notebook"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="signaux_ex.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Maitriser les méthodes</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="signaux_meth_modulation.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Méthode : Etudier une modulation en amplitude.</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer">
+    <div class="container">
+      <p>
+        
+          By C. Lacpatia<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
