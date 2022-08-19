@@ -140,12 +140,12 @@
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="signaux_exemples.html">
-     Exemples : Calculs divers
+     Méthodes : Calculs divers
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="signaux_meth_modulation.html">
-     Méthode : Etudier une modulation en amplitude.
+     Activité : Etudier une modulation en amplitude.
     </a>
    </li>
    <li class="toctree-l2">
@@ -347,8 +347,11 @@ Remarques<div class="summary-down docutils">
 <a class="reference internal image-reference" href="../_images/spectre_creneau.png"><img alt="../_images/spectre_creneau.png" src="../_images/spectre_creneau.png" style="width: 50%;" /></a>
 <p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Spectre d’un créneau</span><a class="headerlink" href="#spectre-creneau" title="Permalink to this image">¶</a></p>
 </div>
-<p>Le spectre de la fonction créneau <span class="math notranslate nohighlight">\(s(t) = \begin{cases} A \textrm{ si }x \in [0;T/2]\\ -A  \textrm{ si }x \in [T/2;T]\end{cases}\)</span> fait correspondre aux fréquences <span class="math notranslate nohighlight">\(\frac{2n+1}{T}\)</span> l’amplitude <span class="math notranslate nohighlight">\(\frac{4A}{\pi(2n+1)}\)</span> avec <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p>
-<p>On peut tracer le spectre en remarquant qu’il s’agit de tracer la fonction <span class="math notranslate nohighlight">\(\frac{4A}{\pi T f}\)</span> en fonction de la fréquence <span class="math notranslate nohighlight">\(f\)</span> et de ne prendre que les valeurs entières impaires.</p>
+<p>Le spectre de la fonction créneau <span class="math notranslate nohighlight">\(s(t) = \begin{cases} A \textrm{ si }x \in [0;T/2]\\ -A  \textrm{ si }x \in [T/2;T]\end{cases}\)</span> fait correspondre aux fréquences <span class="math notranslate nohighlight">\(f_{2n+1} = \frac{2n+1}{T}\)</span> l’amplitude <span class="math notranslate nohighlight">\(\frac{4A}{\pi(2n+1)}=\frac{4A}{\pi T f_{2n+1}}\)</span> avec <span class="math notranslate nohighlight">\(n \in \mathbb{N}\)</span>.</p>
+<p>On peut tracer le spectre en remarquant qu’il s’agit de tracer la fonction</p>
+<div class="math notranslate nohighlight">
+\[f \longrightarrow \frac{4A}{\pi T f}\]</div>
+<p>en fonction de la fréquence <span class="math notranslate nohighlight">\(f\)</span> et de ne prendre que les valeurs entières impaires.</p>
 </div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
@@ -390,10 +393,7 @@ s(t) = a_0 + \sum\limits_{n=1}^{+ \infty} (c_s(n) \sin(\frac{2 \pi n}{T}t + \psi
 </div>
 <div class="topic">
 <p class="topic-title first">Simulation</p>
-<div class="dropdown admonition hint">
-<p class="admonition-title">Hint</p>
 <p>Vous pourrez trouver ici une <a class="reference external" href="https://www.geogebra.org/m/R4FGkE3u">simulation réalisée en Geogebra</a> permettant de construction une fonction périodique par sommation de ses composantes de Fourier.</p>
-</div>
 </div>
 </div>
 </div>
