@@ -442,6 +442,14 @@ s(t) = S_m \cos \left ( \omega t +\phi_0 \right )
 <p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Sinusoïde</span><a class="headerlink" href="#sinusoide" title="Permalink to this image">#</a></p>
 </div>
 </div>
+<div class="sidebar">
+<p class="sidebar-title">Remarques</p>
+<ul class="simple">
+<li><p>On peut utilise la fonction <span class="math notranslate nohighlight">\(sin\)</span> au lieu de la fonction cosinus. Il faudra néanmoins adapter la notion de phase à l’origine.</p></li>
+<li><p>Il arrive qu’on désigne comme signal sinusoïdal un signal de forme <span class="math notranslate nohighlight">\(s(t) = S_m \cos{(\omega t +\phi)} + S_0\)</span> où <span class="math notranslate nohighlight">\(S_0\)</span> est appelé valeur moyenne. Ceci est notamment important en TP. Le terme de valeur moyenne a, comme on le verra ensuite, le même sens que la définition précédente.</p></li>
+<li><p>Un signal constant <span class="math notranslate nohighlight">\(S_0\)</span> peut aussi être vu comme un signal sinusoïdal de fréquence…  nulle. Cette conception sera fondamental pour la suite.</p></li>
+</ul>
+</div>
 <div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p><strong>L’amplitude n’est PAS l’écart à l’axe des abscisses dans le cas général.</strong> Si l’on considère le cas où l’on a ajouté une valeur moyenne, ce n’est pas vrai.</p>
@@ -453,6 +461,15 @@ s(t) = S_m \cos \left ( \omega t +\phi_0 \right )
 </div>
 <div class="section" id="representation-de-fresnel">
 <h2>Représentation de Fresnel<a class="headerlink" href="#representation-de-fresnel" title="Permalink to this headline">#</a></h2>
+<div class="sidebar">
+<p class="sidebar-title">Déphasage constant</p>
+<div class="figure align-center" id="fresnel-mobile">
+<img alt="../_images/fresnel.gif" src="../_images/fresnel.gif" />
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Evolution temporelle</span><a class="headerlink" href="#fresnel-mobile" title="Permalink to this image">#</a></p>
+</div>
+<p>Remarquons que lorsque le temps avance, la phase augmente et l’amplitude est constante. La représentation de Fresnel tourne. La vitesse angulaire de rotation dans le plan de Fresnel est la pulsation <span class="math notranslate nohighlight">\(\omega\)</span>. D’où l’intérêt de cette grandeur.</p>
+<p>Au bout d’une période, la phase a tourner de <span class="math notranslate nohighlight">\(2\pi\)</span> soit une variation de phase <span class="math notranslate nohighlight">\(\Delta \phi = \omega T = 2 \pi\)</span>. D’où la relation entre période et pulsation.</p>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Représentation de Fresnel d’un signal sinusoïdal</strong></p>
@@ -463,7 +480,7 @@ s(t) = S_m \cos \left ( \omega t +\phi_0 \right )
 </ul>
 <div class="figure align-center" id="fresnel-fixe">
 <a class="reference internal image-reference" href="../_images/fresnel_fixe.png"><img alt="../_images/fresnel_fixe.png" src="../_images/fresnel_fixe.png" style="width: 30%;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Représentation de Fresnel</span><a class="headerlink" href="#fresnel-fixe" title="Permalink to this image">#</a></p>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Représentation de Fresnel</span><a class="headerlink" href="#fresnel-fixe" title="Permalink to this image">#</a></p>
 </div>
 <p>Très souvent, on travaillera avec la représentation de Fresnel à l’instant <span class="math notranslate nohighlight">\(t=0\)</span>.</p>
 </div>
@@ -506,6 +523,10 @@ S_{eff} &amp; = \sqrt{\frac{2}{T} \int_{t=0}^{t=T/2} S_m^2 \cos^2{(\omega t + \p
 \end{align*}\]</div>
 </div></blockquote>
 </div>
+<div class="margin sidebar">
+<p class="sidebar-title"></p>
+<p><strong>Si les deux sinusoïdes sont de même pulsation, la propriété n’est plus vraie,</strong> on peut s’en rendre compte en remarquant que le dernier terme (différences des phases) est alors un terme constant dont la valeur moyenne n’est pas forcément nulle.</p>
+</div>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p><strong>Valeur efficace d’une somme de deux sinusoïdes</strong></p>
@@ -518,8 +539,8 @@ S_{eff} = \sqrt{S_{1,eff}^2 + S_{2,eff}^2}
 <div class="admonition-demonstration admonition">
 <p class="admonition-title"><strong>Démonstration</strong></p>
 <blockquote>
-<div><div class="amsmath math notranslate nohighlight" id="equation-10dce8d7-e110-4a05-805f-a91459c1dfd2">
-<span class="eqno">(2)<a class="headerlink" href="#equation-10dce8d7-e110-4a05-805f-a91459c1dfd2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div><div class="amsmath math notranslate nohighlight" id="equation-ef01d958-2b4e-4c3e-9386-b939274dd314">
+<span class="eqno">(2)<a class="headerlink" href="#equation-ef01d958-2b4e-4c3e-9386-b939274dd314" title="Permalink to this equation">#</a></span>\[\begin{align}
 S_{eff} &amp;= \sqrt{\left\langle {(S_1(t) + S_2(t))}^2\right\rangle}\\
 			&amp;= \sqrt{\left\langle {S_1(t)}^2 + {S_2(t)}^2 + 2 S_1(t) S_2(t)\right\rangle}\\
 			&amp;= \sqrt{\left\langle{S_1(t)}^2\right\rangle + \left\langle{S_2(t)}^2\right\rangle + \left\langle2 S_1(t) S_2(t)\right\rangle}\\
